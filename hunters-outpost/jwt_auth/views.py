@@ -26,21 +26,21 @@ class LoginView(APIView):
         try:
             return User.objects.get(email=email)
         except User.DoesNotExist:
-            raise PermissionDenied({'message': 'Invalid Credentials'})
+            raise PermissionDenied({'message': 'Invalid Username/Login'})
 
     def post(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
         user = self.get_user(email)
         if not user.check_password(password):
-            raise PermissionDenied({'message': 'Invalid Credentials'})
-        dt = datetime.now() + timedelta(days=7)
+            raise PermissionDenied({'message': 'Invalid Username/Login'})
+        dt = datetime.now() + timedelta(days=21)
         token = jwt.encode(
             {'sub': user.id, 'exp': int(dt.strftime('%s'))},
             settings.SECRET_KEY,
             algorithm='HS256'
         )
-        return Response({'token': token, 'message': f'Welcome back {user.username}'})
+        return Response({'token': token, 'message': f'Greetings {user.username}'})
 
 class ProfileView(APIView):
 
