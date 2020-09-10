@@ -24,7 +24,3 @@ class CommentDetailView(APIView):
         except Comment.DoesNotExist:
             raise NotFound()
 
-    def delete(self, request, pk):
-        comment_to_delete = self.get_comment(pk)
-        comment_to_delete.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)

@@ -1,0 +1,107 @@
+[
+{
+  "model": "category.category",
+  "pk": 2,
+  "fields": {
+    "name": "Edible items"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 3,
+  "fields": {
+    "name": "Antiques"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 4,
+  "fields": {
+    "name": "Art"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 6,
+  "fields": {
+    "name": "Experiences"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 7,
+  "fields": {
+    "name": "Books"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 8,
+  "fields": {
+    "name": "Movies"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 9,
+  "fields": {
+    "name": "Music"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 10,
+  "fields": {
+    "name": "Clothing"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 11,
+  "fields": {
+    "name": "Furniture"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 12,
+  "fields": {
+    "name": "Games"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 13,
+  "fields": {
+    "name": "Household"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 14,
+  "fields": {
+    "name": "Miscellaneous"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 15,
+  "fields": {
+    "name": "Tools"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 16,
+  "fields": {
+    "name": "Toys"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 17,
+  "fields": {
+    "name": "Vehicles"
+  }
+}
+]
