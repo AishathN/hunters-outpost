@@ -43,4 +43,8 @@ class MissionDetailView(APIView):
             return Response(updated_mission.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_mission.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+    def delete(self, request, pk):
+        mission_to_delete = self.get_mission(pk=pk)
+        mission_to_delete.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 # Create your views here.
