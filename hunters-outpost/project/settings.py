@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'mission',
     'comments',
-    'category'
+    'category',
+    'jwt_auth'
 ]
+
+AUTH_USER_MODEL = 'jwt_auth.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
