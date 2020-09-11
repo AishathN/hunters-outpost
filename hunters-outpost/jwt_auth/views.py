@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.exceptions import PermissionDenied
+from rest_framework.exceptions import PermissionDenied , NotFound
 from rest_framework.permissions import IsAuthenticated , IsAuthenticatedOrReadOnly
 from rest_framework import status
 from django.contrib.auth import get_user_model
@@ -50,3 +50,24 @@ class ProfileView(APIView):
         user = User.objects.get(pk=request.user.id)
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
+
+# --------untested below -------- #
+class UserView(APIView):
+
+    # permission_classes = (IsAuthenticated, IsAuthenticatedOrReadOnly)
+
+    # def get(self, request, pk):
+    #     user = User.objects.get(pk=pk)
+    #     serialized_user = PopulatedUserSerializer(user)
+    #     return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound()    
+
+    def get(self, request, pk):
+        user = self.get_user(pk)
+        serialized_user = UserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)

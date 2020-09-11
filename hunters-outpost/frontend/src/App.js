@@ -3,8 +3,10 @@ import axios from 'axios'
 import Register from '../src/components/auth/Register'
 import Login from '../src/components/auth/Login'
 import MissionIndex from '../src/components/missions/MissionIndex'
-import Missionnews from '../src/components/missions/Missionnew'
-import Select from 'react-select'
+import Missionnew from '../src/components/missions/Missionnew'
+// import Select from 'react-select'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import NavBar from '../src/components/common/NavBar'
 
 class App extends React.Component{
 
@@ -29,6 +31,17 @@ class App extends React.Component{
   render(){
     return (
       <div>
+      <BrowserRouter>
+        <NavBar />
+        <div>
+          <Switch>
+            {/* <Route exact path="/" component={ Home } /> */}
+            {/* <Route exact path="/missions" component={ BrowseMissions } /> */}
+            {/* <Route path="/*" component={Error} /> */}
+          </Switch>
+        </div>
+      </BrowserRouter>
+      <div>
         <div><Register></Register>
         </div>
         <div><Login></Login>
@@ -37,9 +50,10 @@ class App extends React.Component{
           <MissionIndex></MissionIndex>
         </div>
         <div>
-          <Missionnews></Missionnews>
+          <Missionnew></Missionnew>
         </div>
       </div>
+    </div>
     )
 }
 }
