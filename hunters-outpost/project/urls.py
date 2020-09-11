@@ -17,9 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('missions/', include('mission.urls')),
-    path('comments/', include('comments.urls')),
-    path('categories/', include('category.urls')),
-    path('auth/', include('jwt_auth.urls'))
+    path('api/admin/', admin.site.urls),
+    path('api/missions/', include('mission.urls')),
+    path('api/comments/', include('comments.urls')),
+    path('api/categories/', include('category.urls')),
+    path('api/auth/', include('jwt_auth.urls'))
 ]
