@@ -10,5 +10,11 @@ class Mission(models.Model):
         related_name='category'
     )
 
+    owner = models.ForeignKey(
+        'jwt_auth.User',
+        related_name="created_mission",
+        on_delete=models.CASCADE
+    )
+
     def __str__(self):
             return f'{self.name}'

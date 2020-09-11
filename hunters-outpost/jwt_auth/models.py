@@ -6,11 +6,13 @@ class User(AbstractUser):
     profile_image = models.CharField(max_length=500, blank=True)
     about_me = models.CharField(max_length=500, blank=True)
     points = models.IntegerField(default=0)
-
-#     {
-#   "email": "aisha@email.com",
+    def __str__(self):
+                return f'{self.username}'
+#  {
+#   "email": "dada@email.com",
+# 	"username":"dad",
 # 	"profile_image": "--",
 # 	"about_me": "about this person",
 #   "password": "passthingie",
-# 	"password": "passthingie"
+# 	"password_confirmation": "passthingie"
 # }
