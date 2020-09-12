@@ -41,12 +41,6 @@ class Missionnew extends React.Component {
     console.log(this.state)
     return (
       <section>
-
-        <div className="hero-gigs-indv text-center">
-          <div className="hero-gigs-indv-txt">
-            <h2>Create a new mission</h2>
-          </div>
-        </div>
             <MissionForm 
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}

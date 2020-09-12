@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 // import Missionnew from '../missions/Missionnew'
 import MissionCard from '../missions/MissionCard'
 import MissionHome from './MissionHome'
+import Jarvis from '../common/jarvis'
 
 class MissionIndex extends React.Component {
   // state to store form data
@@ -28,8 +29,10 @@ class MissionIndex extends React.Component {
 
   render() {
     return (
-    <div classname="split_mission"><MissionHome>
+      <div className="missionBase">
+    <div><MissionHome>
       </MissionHome></div>
+      </div>
     )
   }
 }

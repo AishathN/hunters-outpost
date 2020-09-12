@@ -1,25 +1,25 @@
-.main_style{
-  background-color: black;
-  color: darkcyan;
-  display:flex;
-  flex-direction: row;
-  min-height: 700px
-}
+
+// mission styles for left side
 
 .mission_style{
   background-color:black;
   min-height: 700px;
   color: cadetblue;
+  padding:10px;
   width:50%
 }
 
-.mission_listing{
-  font-size: 20px;
-  padding: 8px
+.missionBase {
+  display:flex;
+  background-color:black;
+  flex-wrap:wrap
 }
 
+
+// authentication styles
+
 .login_style{
-  background-color: dimgray;;
+  background-color: dimgray;
   color:black
 }
 
@@ -28,24 +28,37 @@
   color:black
 }
 .newMission_style{
-  background-color: mediumpurple;
+  background-color:black;
   color:black
 }
+
+
+// app js styles
+
 
 .app_style{
   background-color: mediumturquoise;
   color:black
 }
 
+// navbar styling
+
 .navbar_style{
-  background-color: orchid;
+  display:flex;
+  justify-content: space-around;
+  background-color:rgb(24, 36, 36);
   color:black;
   height:100px
 }
 
+.navimage{
+  max-height: 50px;
+  padding:20px;
+  margin:10px
+}
 .left_style{
   background-color: palegreen;
-  width:50%
+  width:50%;
 }
 
 .right_style{
@@ -53,8 +66,197 @@
   width:50%
 }
 
-.split_mission{
+// main styles
+
+.main_style{
+  background-color: black;
+  color: darkcyan;
   display:flex;
-  width:50%;
-  min-height: 700px;
+  flex-direction: row;
+  min-height: 700px
+}
+
+
+a:link {
+  text-decoration: none;
+  color:white
+}
+
+a:visited{
+  text-decoration: none;
+  color:white
+}
+
+.splitstyle{
+  display:flex
+}
+
+// JARVIS import elements
+
+:root {
+  // --s-loader-wrapper-bg-color: rgb(21, 22, 43);
+  // --s-loader-width: 200px;
+  // --s-loader-height: var(--s-loader-width);
+  // --s-loader-border-color-trans: rgba(29, 161, 242, 0.2);
+  // --s-loader-border-color-full: rgb(29, 161, 242);
+}
+
+.jarvis_body {
+  margin: 0;
+  background:black;
+  height: 80vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jarvis_notched {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 365px;
+  height: 365px;
+  border: 7px dotted;
+  border-color: rgba(29, 160, 242, 0.281);
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 65s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  position: relative;  
+}
+
+.spinning-loader3 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 290px;
+  border: 2px solid rgba(29, 161, 242, 0.2);
+  border-left-color: rgba(29, 160, 242, 0.514);
+  border-right-color: rgb(29, 161, 242);
+  border-top-color: rgb(29, 161, 242, );
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  
+  position: relative;
+}
+.spinning-loader {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 265px;
+  height: 265px;
+  border: 5px solid rgba(29, 161, 242, 0.2);
+  border-left-color: rgb(29, 161, 242);
+  border-right-color: rgb(29, 161, 242);
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+
+  
+  position: relative;
+}
+
+
+.spinning-loader2 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+  height: 195px;
+  border: 5px solid rgba(29, 161, 242, 0.2);
+  border-left-color: rgba(29, 160, 242, 0.514);
+  border-right-color: rgb(29, 161, 242);
+  border-top-color: rgb(29, 161, 242, );
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  position: relative;
+
+  animation-direction: reverse;
+}
+
+.spinning-loader4 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border: 2px solid rgba(29, 161, 242, 0.2);
+  border-left-color: rgba(29, 160, 242, 0.514);
+  border-right-color: rgb(29, 161, 242);
+  border-top-color: rgb(29, 161, 242, );
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  // animation-direction: reverse;
+  
+  position: relative;
+}
+
+.jarvis_core{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: #afd2d6;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  // background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  position: relative;  
+  
+  // position: relative;
+  
+}
+
+.jarvis_glow{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: soft-light;
+  background-color: rgba(0, 255, 208, 0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 215px 215px rgba(0, 255, 255, 0.27);
+  position: relative;  
+}
+
+.jarvis_core :hover {
+  color: #7bd3dd;
+  text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
+  transition: all 0.1s ease-in;
+}
+
+
+
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

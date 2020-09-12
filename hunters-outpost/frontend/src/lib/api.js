@@ -45,8 +45,8 @@ export const deleteMission = id => {
 // {
 //   "email": "aishath@email.com",
 // 	"username": "aishath",
-// 	"profile_image": "--",
+// 	"image": "--",
 // 	"about_me": "about this person",
 //   "password": "passthingie",
-// 	"password": "passthingie"
+// 	"password_confirmation": "passthingie"
 // }

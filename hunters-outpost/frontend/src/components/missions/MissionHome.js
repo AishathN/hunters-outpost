@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import MissionCard from '../missions/MissionCard'
+import Jarvis from '../common/jarvis'
 
 class MissionHome extends React.Component {
   // state to store form data
@@ -26,8 +27,8 @@ class MissionHome extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <section className="mission_style">
-        <div>
+      <div className="splitstyle">
+        <div  className="mission_style">
           {this.state.missions.map(name => {
             return (
               <div key={name.id}>
@@ -37,8 +38,8 @@ class MissionHome extends React.Component {
             )
           })}
         </div>
-
-      </section>
+       <Jarvis></Jarvis>
+      </div>
     )
   }
 }

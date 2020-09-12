@@ -3,6 +3,7 @@ import axios from 'axios'
 import Left from '../common/LeftSide'
 import Right from '../common/RightSide'
 import { Link } from 'react-router-dom'
+import Jarvis from '../common/jarvis'
 
 
 class Home extends React.Component{
@@ -27,7 +28,7 @@ class Home extends React.Component{
     return (
       <div className="main_style">
       <Left></Left>
-      <Right></Right>
+      <Jarvis></Jarvis>
       </div>
     )
   }
