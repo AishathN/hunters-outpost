@@ -27,7 +27,7 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
     <form onSubmit={handleSubmit}>
 
       <div className="field">
-        <label className="label">Mission Title</label>
+        {/* <label className="label">Mission Title</label> */}
           <div className="control">
             <input
               type="text"
@@ -41,7 +41,7 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
         </div>
 
           <div className="field">
-            <label className="label">Image (optional)</label>
+            {/* <label className="label">Image (optional)</label> */}
             <div className="control">
               <input
                 className="input"
@@ -53,7 +53,7 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
             </div>
           </div>
           <div className="field">
-                <label className="label">Category</label>
+                {/* <label className="label">Category</label> */}
                 <div className="control">
                   <Select options={options}
                   onChange={handleMultiChange}
@@ -62,10 +62,10 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
               </div>
               
           <div className="field">
-            <label className="label">Description</label>
+            {/* <label className="label">Description</label> */}
             <div className="control">
               <textarea
-                className="input"
+                className="input textyfield"
                 placeholder="description"
                 name="description"
                 onChange={handleChange}

@@ -31,7 +31,7 @@ class MissionHome extends React.Component {
         <div  className="mission_style">
           {this.state.missions.map(name => {
             return (
-              <div key={name.id}>
+              <div key={name.id} className="missionItem">
                 <MissionCard key={name.id} {...name}/>
                 {name.id}
               </div>

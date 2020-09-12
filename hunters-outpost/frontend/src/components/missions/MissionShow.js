@@ -24,13 +24,13 @@ class MissionShow extends React.Component {
     //   console.log()
     // } catch (err) {
     //   console.log(err)
-    // }
+    }
 
     render() {
       return (
         <div><h1>hello world</h1></div>
       )}
   }
-}
+
 
       export default MissionShow

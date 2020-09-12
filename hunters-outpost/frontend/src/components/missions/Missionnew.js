@@ -25,12 +25,10 @@ class Missionnew extends React.Component {
   }
 
   handleSubmit = async event => {
-    // event.preventDefault()
+    event.preventDefault()
 
     try {
       const res = await createMission(this.state.formData)
-      // popupNotification('You have successfuly added a new mission')
-      // this.props.history.push(`/missions/`)
     } catch (err) {
       console.log(err.response.data)
     }
@@ -40,7 +38,7 @@ class Missionnew extends React.Component {
 
     console.log(this.state)
     return (
-      <section>
+      <section className="missionForm">
             <MissionForm 
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}

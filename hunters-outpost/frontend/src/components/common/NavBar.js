@@ -8,7 +8,7 @@ import home from '../../assets/images/home1.png'
 const NavBar = ( ) => (
   <nav className ="navbar_style"> 
     <div>
-      <Link to="/" className = "navbar-item"><img className="navimage" src={home}/></Link>
+      <Link to="/" className = "navbar-item"><img className="navimage" src={home}></img></Link>
       <Link to="/missions" className = "navbar-item"><img className="navimage" src={browse}></img></Link>
       <a href = {'https://amazon.com/'}><img className="navimage" src={amazon}></img></a>
       <a href = {'https://google.com/'}><img className="navimage" src={google}></img></a>

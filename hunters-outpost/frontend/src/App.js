@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import MissionIndex from '../src/components/missions/MissionIndex'
 import Missionnew from '../src/components/missions/Missionnew'
-import MissionShow from '../src/components/missions/Missionnew'
+import MissionShow from '../src/components/missions/MissionShow'
 import Home from '../src/components/common/Home'
 // import Select from 'react-select'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -17,20 +17,20 @@ class App extends React.Component{
 
 
 // testing fetching data
-  async componentDidMount() {
-    try {
-      const res = await axios.get('/api/missions')
-      this.setState({ missions: res.data })
-      console.log("getting from the app" , this.state)
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // async componentDidMount() {
+  //   try {
+  //     const res = await axios.get('/api/missions')
+  //     this.setState({ missions: res.data })
+  //     console.log("getting from the app" , this.state)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
 
   render(){
     return (
-      <div>
+      <div className="app_style">
       <div>
       <BrowserRouter>
         <NavBar />
@@ -38,7 +38,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />
-            <Route exact path="/missions/:id/" component={MissionShow}/>
+            <Route exact path="/missions/show" component={MissionShow}/>
             {/* <Route exact path="/missions/${id}" component={ MissionIndex } /> */}
             {/* <Route path="/*" component={Error} /> */}
           </Switch>
