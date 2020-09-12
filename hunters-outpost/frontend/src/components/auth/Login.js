@@ -19,7 +19,7 @@ class Login extends React.Component {
   }
 
   handleSubmit = async event => {
-    event.preventDefault()
+    // event.preventDefault()
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)

@@ -3,27 +3,33 @@
   color: darkcyan;
   display:flex;
   flex-direction: row;
-  min-height: 800px
+  min-height: 700px
 }
 
 .mission_style{
-  background-color: darkslategray;
-  min-height: 800px;
-  color:white
+  background-color:black;
+  min-height: 700px;
+  color: cadetblue;
+  width:50%
+}
+
+.mission_listing{
+  font-size: 20px;
+  padding: 8px
 }
 
 .login_style{
   background-color: dimgray;;
-  color:white
+  color:black
 }
 
 .register_style{
   background-color: lightslategrey;
-  color:white
+  color:black
 }
 .newMission_style{
   background-color: mediumpurple;
-  color:white
+  color:black
 }
 
 .app_style{
@@ -45,4 +51,10 @@
 .right_style{
   background-color: sandybrown;
   width:50%
+}
+
+.split_mission{
+  display:flex;
+  width:50%;
+  min-height: 700px;
 }

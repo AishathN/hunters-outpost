@@ -30,7 +30,7 @@ class Missionnew extends React.Component {
     try {
       const res = await createMission(this.state.formData)
       // popupNotification('You have successfuly added a new mission')
-      this.props.history.push(`/missions/`)
+      // this.props.history.push(`/missions/`)
     } catch (err) {
       console.log(err.response.data)
     }

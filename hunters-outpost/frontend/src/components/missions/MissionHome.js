@@ -1,12 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import MissionForm from '../missions/MissionForm'
-// import Missionnew from '../missions/Missionnew'
 import MissionCard from '../missions/MissionCard'
-import MissionHome from './MissionHome'
 
-class MissionIndex extends React.Component {
+class MissionHome extends React.Component {
   // state to store form data
   state = {
     missions: []
@@ -27,11 +24,23 @@ class MissionIndex extends React.Component {
 
 
   render() {
+    console.log(this.state)
     return (
-    <div classname="split_mission"><MissionHome>
-      </MissionHome></div>
+      <section className="mission_style">
+        <div>
+          {this.state.missions.map(name => {
+            return (
+              <div key={name.id}>
+                <MissionCard key={name.id} {...name}/>
+                {name.id}
+              </div>
+            )
+          })}
+        </div>
+
+      </section>
     )
   }
 }
 
-export default MissionIndex
+export default MissionHome
