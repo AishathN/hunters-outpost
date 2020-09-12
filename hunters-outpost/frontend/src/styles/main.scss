@@ -1,0 +1,48 @@
+.main_style{
+  background-color: black;
+  color: darkcyan;
+  display:flex;
+  flex-direction: row;
+  min-height: 800px
+}
+
+.mission_style{
+  background-color: darkslategray;
+  min-height: 800px;
+  color:white
+}
+
+.login_style{
+  background-color: dimgray;;
+  color:white
+}
+
+.register_style{
+  background-color: lightslategrey;
+  color:white
+}
+.newMission_style{
+  background-color: mediumpurple;
+  color:white
+}
+
+.app_style{
+  background-color: mediumturquoise;
+  color:black
+}
+
+.navbar_style{
+  background-color: orchid;
+  color:black;
+  height:100px
+}
+
+.left_style{
+  background-color: palegreen;
+  width:50%
+}
+
+.right_style{
+  background-color: sandybrown;
+  width:50%
+}

@@ -21,7 +21,7 @@ const options = [
 const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, buttonText }) => {
 
   return (
-    <div className="new-form-area">
+    <div className="new-form-area newMission_style">
     <div className="new-form">
 
     <form onSubmit={handleSubmit}>
@@ -52,40 +52,15 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
               />
             </div>
           </div>
-
           <div className="field">
                 <label className="label">Category</label>
                 <div className="control">
                   <Select options={options}
                   onChange={handleMultiChange}
-                  isMulti
-                  // value={formData.category}
-                  />
+                  isMulti />
                 </div>
               </div>
-              <div className="field">
-              <label className="label">category</label>
-              <div className="control">
-                <label className="radio">
-                  <input
-                    type="radio"
-                    name="radio"
-                    // onChange={handleCheckChange}
-                    value={16}
-                  />
-                    Toys
-                </label>
-                <label className="radio">
-                  <input
-                    type="radio"
-                    name="radio"
-                    // onChange={handleCheckChange}
-                    value={7}
-                  />
-                    Art
-                </label>
-                </div>
-                </div>
+              
           <div className="field">
             <label className="label">Description</label>
             <div className="control">

@@ -51,15 +51,7 @@ class ProfileView(APIView):
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
 
-# --------untested below -------- #
 class UserView(APIView):
-
-    # permission_classes = (IsAuthenticated, IsAuthenticatedOrReadOnly)
-
-    # def get(self, request, pk):
-    #     user = User.objects.get(pk=pk)
-    #     serialized_user = PopulatedUserSerializer(user)
-    #     return Response(serialized_user.data, status=status.HTTP_200_OK)
 
     def get_user(self, pk):
         try:

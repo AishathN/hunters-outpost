@@ -15,6 +15,7 @@ class Login extends React.Component {
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     this.setState({ formData, error: false })
+    console.log(this.state)
   }
 
   handleSubmit = async event => {
@@ -32,7 +33,7 @@ class Login extends React.Component {
   render() {
     return (
 
-      <section>
+      <section className="login_style">
 
         <div>
           <div>

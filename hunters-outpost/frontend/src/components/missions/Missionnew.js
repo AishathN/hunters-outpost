@@ -3,7 +3,7 @@ import { createMission } from '../../lib/api'
 import MissionForm from './MissionForm'
 // import { popupNotification } from '../../lib/notification'
 
-class MissionNew extends React.Component {
+class Missionnew extends React.Component {
   state = {
     formData: {
       name: '',
@@ -25,12 +25,12 @@ class MissionNew extends React.Component {
   }
 
   handleSubmit = async event => {
-    event.preventDefault()
+    // event.preventDefault()
 
     try {
       const res = await createMission(this.state.formData)
       // popupNotification('You have successfuly added a new mission')
-      // this.props.history.push(`/missions/${res.data._id}`)
+      this.props.history.push(`/missions/`)
     } catch (err) {
       console.log(err.response.data)
     }
@@ -58,4 +58,4 @@ class MissionNew extends React.Component {
   }
 }
 
-export default MissionNew
+export default Missionnew

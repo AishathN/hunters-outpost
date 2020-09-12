@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import Left from '../common/LeftSide'
+import Right from '../common/RightSide'
 import { Link } from 'react-router-dom'
 
 
@@ -23,9 +25,9 @@ class Home extends React.Component{
 
   render(){
     return (
-      <div><Register>
-        </Register>
-      <h1>Hello World</h1>
+      <div className="main_style">
+      <Left></Left>
+      <Right></Right>
       </div>
     )
   }

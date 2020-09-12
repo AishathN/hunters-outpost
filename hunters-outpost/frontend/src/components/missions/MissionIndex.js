@@ -1,7 +1,7 @@
 import React from 'react'
-// import { getAllGigs } from '../../lib/api'
 import axios from 'axios'
-// import GigCard from './GigCard'
+// import MissionForm from '../missions/MissionForm'
+// import Missionnew from '../missions/Missionnew'
 
 class MissionIndex extends React.Component {
   // state to store form data
@@ -25,8 +25,8 @@ class MissionIndex extends React.Component {
 
   render() {
     return (
-      <section>
-        <h1>missions go here</h1>
+      <section className="mission_style">
+        <h1>Hello world, this is the mission component</h1>
       </section>
     )
   }
