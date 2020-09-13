@@ -14,7 +14,7 @@ class Left extends React.Component{
 
   render(){
     return (
-      <div>
+      <div className="auth_style">
       <div><Register></Register>
         </div>
         <div><Login></Login>

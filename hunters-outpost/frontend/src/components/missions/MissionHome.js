@@ -22,28 +22,31 @@ class MissionHome extends React.Component {
     } catch (err) {
       console.log(err)
     }
+
+    setInterval(this.update, 1000)
   }
 
   render() {
     console.log(this.state)
     return (
-      <div>
-         
-        <div>
-        <PerfectScrollbar>
-          {this.state.missions.map(name => {
-            return (
-              <div key={name.id}>
-                <MissionCard key={name.id} {...name}/>
-                {name.id}
-              </div>
-            )
-          })}
+      <div className="wrapper">
+        <div className="left_style">
+          <div className="mission_spacer">
+          <PerfectScrollbar>
+            {this.state.missions.map(name => {
+              return (
+                <div key={name.id} className="missionItem">
+                  <MissionCard key={name.id} {...name}/>
+                  {name.id}
+                </div>
+              )
+            })}
           </PerfectScrollbar>
+          </div>
         </div>
-          <div>
-       <Jarvis></Jarvis>
-       </div>
+        <div className="right_style">
+          <Jarvis></Jarvis>
+        </div>
       </div>
     )
   }

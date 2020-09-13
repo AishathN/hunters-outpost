@@ -1,36 +1,68 @@
 
 // mission styles for left side
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+body {
+  // display:flex;
+  // width:100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Megrim', cursive
+}
 
 .mission_style{
   min-height: 600px;
   max-height:700px;
-  // color: cadetblue;
-  // padding:20px 20px;
-  // width:50%;
+}
+
+.commentform{
+  max-width:200px
 }
 
 .wrapper{
 display:flex;
 flex-direction: row;
+justify-content: flex-end;
+align-items: stretch;
+min-height:500px;
+max-width:80%;
+// margin:100px 0 0 0;
 }
+
 .left_style{
   display:flex;
   justify-content: center;
-  width:50%
+  width:40%;
+  // margin:100px 0 0 100px;
 }
 
 .right_style{
   display:flex;
   justify-content: center;
-  width:50%
+  width:40%;
+  color: cadetblue;
 }
 
 .login_style{
-min-width: 30%;
+min-width: 35%;
+background-color: rgba(7, 26, 24, 0.781);
+border: 1px solid rgba(32, 178, 171, 0.726);
+padding: 10px;
+color: cadetblue;
+margin: 0 25px 0 25px;
 }
 
 .register_style{
-  min-width: 30%;
+  min-width: 35%;
+  background-color: rgba(7, 26, 24, 0.781);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  padding: 10px;
+  color: cadetblue;
+  margin: 0 25px 0 25px;
+}
+
+.auth_style{
+  display:flex;
 }
 
 .missionBase {
@@ -44,21 +76,22 @@ min-width: 30%;
   
 }
 
-
-.mission_detail{
-  min-height: 600px;
-  max-height:600px;
-  color: cadetblue;
-  padding:20px 20px;
-  width:50%;
-  background-color: rgba(7, 26, 24, 0.781);
-  margin:25px;
-  margin:25px;
-  color:rgba(42, 161, 155, 0.932);
-  border: 1px solid rgba(32, 178, 171, 0.726);
-  padding: 10px;
+.mission_spacer{
+  max-height:400px
 }
 
+
+.mission_detail{
+  height: 500px;
+  max-width:400px;
+  display:flex;
+  flex-direction: column;
+  color: cadetblue;
+  padding:0px 5px;
+  background-color: rgba(7, 26, 24, 0.781);
+  color:rgba(42, 161, 155, 0.932);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+}
 
 
 // authentication styles
@@ -70,10 +103,7 @@ min-width: 30%;
 }
 
 
-
-
 // app js styles
-
 
 .app_style{
   background-image: url('../assets/images/backgroundAPP.jpg');
@@ -81,7 +111,12 @@ min-width: 30%;
   background-color: black;
   background-size: cover;
   background-position: center;
+  position:relative;
   color:black
+}
+
+.body{
+  background-color: black;
 }
 
 // navbar styling
@@ -91,7 +126,7 @@ min-width: 30%;
   justify-content: space-around;
   background-color:rgba(10, 20, 23, 0.61);
   color:black;
-  height:100px;
+  height:250px;
   width:100%;
 }
 
@@ -104,10 +139,8 @@ a:hover {
 
 .missionItem{
   background-color: rgba(7, 26, 24, 0.781);
-  margin:25px;
   color:rgba(42, 161, 155, 0.932);
   border: 1px solid rgba(32, 178, 171, 0.726);
-  padding: 10px;
 }
 
 .missionForm{
@@ -131,17 +164,6 @@ a:hover {
 .navimage:hover{
   filter: hue-rotate(225deg);
 }
-
-
-// // main styles
-
-// .main_style{
-//   color: darkcyan;
-//   display:flex;
-//   flex-direction: row;
-//   min-height: 600px;
-//   justify-content: center;
-// }
 
 a:link {
   text-decoration: none;

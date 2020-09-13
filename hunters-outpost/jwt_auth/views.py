@@ -63,3 +63,10 @@ class UserView(APIView):
         user = self.get_user(pk)
         serialized_user = UserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+class UserSpecificView(APIView):
+
+    def get(self, request):
+        users = User.objects.all()
+        serialized_users = PopulatedUserSerializer(users, many=True)
+        return Response(serialized_users.data, status=status.HTTP_200_OK)

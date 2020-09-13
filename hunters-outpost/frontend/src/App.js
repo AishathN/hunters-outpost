@@ -15,19 +15,6 @@ class App extends React.Component{
     missions: []
   }
 
-
-// testing fetching data
-  // async componentDidMount() {
-  //   try {
-  //     const res = await axios.get('/api/missions')
-  //     this.setState({ missions: res.data })
-  //     console.log("getting from the app" , this.state)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
-
   render(){
     return (
       <div className="app_style">

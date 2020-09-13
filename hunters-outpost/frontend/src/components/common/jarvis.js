@@ -13,11 +13,11 @@ class Jarvis extends React.Component {
     return (
     <div className="jarvis_body">
       <div className="jarvis_notched :hover">
-        <div class="spinning-loader3">
-          <div class="spinning-loader">
-            <div class="spinning-loader2">
-              <div class="spinning-loader4">
-              <div class="jarvis_core">
+        <div className="spinning-loader3">
+          <div className="spinning-loader">
+            <div className="spinning-loader2">
+              <div className="spinning-loader4">
+              <div className="jarvis_core">
                 <div className="jarvis_glow">
                   </div>
                 </div>
