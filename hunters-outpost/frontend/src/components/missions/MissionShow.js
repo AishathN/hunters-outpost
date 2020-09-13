@@ -17,20 +17,22 @@ class MissionShow extends React.Component {
 
   async componentDidMount() {
 
-    // try {
-    //   const missionId = this.props.match.params.id
-    //   const res = await getSingleMission(missionId)
-    //   this.setState({ mission: res.data })
-    //   console.log()
-    // } catch (err) {
-    //   console.log(err)
+    try {
+      const missionId = this.props.match.params.id
+      const res = await getSingleMission(missionId)
+      this.setState({ mission: res.data })
+      console.log(this.state)
+    } catch (err) {
+      console.log(err)
     }
+  }
 
     render() {
       return (
         <div><h1>hello world</h1></div>
       )}
   }
+
 
 
       export default MissionShow

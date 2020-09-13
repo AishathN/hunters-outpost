@@ -38,8 +38,8 @@ class App extends React.Component{
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />
-            <Route exact path="/missions/show" component={MissionShow}/>
-            {/* <Route exact path="/missions/${id}" component={ MissionIndex } /> */}
+            {/* <Route exact path="/missions/show" component={MissionShow}/> */}
+            <Route exact path="/missions/:id/" component={ MissionShow } />
             {/* <Route path="/*" component={Error} /> */}
           </Switch>
         </div>
