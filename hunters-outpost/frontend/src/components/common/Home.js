@@ -26,9 +26,13 @@ class Home extends React.Component{
 
   render(){
     return (
-      <div className="main_style">
-      <Left></Left>
-      <Jarvis></Jarvis>
+      <div className="wrapper">
+        <div className="left_style">
+          <Left></Left>
+          </div>
+        <div className="right_style">
+          <Jarvis></Jarvis>
+        </div>
       </div>
     )
   }

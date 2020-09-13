@@ -3,13 +3,15 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import MissionCard from '../missions/MissionCard'
 import Jarvis from '../common/jarvis'
+import PerfectScrollbar from 'react-perfect-scrollbar'
+
+import 'react-perfect-scrollbar/dist/css/styles.css'
 
 class MissionHome extends React.Component {
   // state to store form data
   state = {
     missions: []
   }
-
 
 //testing fetching data
   async componentDidMount() {
@@ -22,23 +24,26 @@ class MissionHome extends React.Component {
     }
   }
 
-
-
   render() {
     console.log(this.state)
     return (
-      <div className="splitstyle">
-        <div  className="mission_style">
+      <div>
+         
+        <div>
+        <PerfectScrollbar>
           {this.state.missions.map(name => {
             return (
-              <div key={name.id} className="missionItem">
+              <div key={name.id}>
                 <MissionCard key={name.id} {...name}/>
                 {name.id}
               </div>
             )
           })}
+          </PerfectScrollbar>
         </div>
+          <div>
        <Jarvis></Jarvis>
+       </div>
       </div>
     )
   }

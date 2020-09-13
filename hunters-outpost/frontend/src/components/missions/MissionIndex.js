@@ -29,7 +29,7 @@ class MissionIndex extends React.Component {
 
   render() {
     return (
-      <div className="missionBase">
+      <div>
     <div><MissionHome>
       </MissionHome></div>
       </div>

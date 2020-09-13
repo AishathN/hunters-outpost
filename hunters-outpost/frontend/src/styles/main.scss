@@ -2,36 +2,74 @@
 // mission styles for left side
 
 .mission_style{
-  // background-color:black;
   min-height: 600px;
   max-height:700px;
-  color: cadetblue;
-  padding:20px 20px;
+  // color: cadetblue;
+  // padding:20px 20px;
+  // width:50%;
+}
+
+.wrapper{
+display:flex;
+flex-direction: row;
+}
+.left_style{
+  display:flex;
+  justify-content: center;
   width:50%
+}
+
+.right_style{
+  display:flex;
+  justify-content: center;
+  width:50%
+}
+
+.login_style{
+min-width: 30%;
+}
+
+.register_style{
+  min-width: 30%;
 }
 
 .missionBase {
   display:flex;
-  // background-color:black;
-  flex-wrap:wrap
+  justify-content: center;
 }
+
+.splitstyle{
+  display:flex;
+  // justify-content: space-around;
+  
+}
+
+
+.mission_detail{
+  min-height: 600px;
+  max-height:600px;
+  color: cadetblue;
+  padding:20px 20px;
+  width:50%;
+  background-color: rgba(7, 26, 24, 0.781);
+  margin:25px;
+  margin:25px;
+  color:rgba(42, 161, 155, 0.932);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  padding: 10px;
+}
+
 
 
 // authentication styles
 
-.login_style{
-  background-color: dimgray;
-  color:black
-}
 
-.register_style{
-  background-color: lightslategrey;
-  color:white
-}
 .newMission_style{
   background-color:rgba(14, 49, 43, 0.61);
   color:black
 }
+
+
 
 
 // app js styles
@@ -57,6 +95,13 @@
   width:100%;
 }
 
+a:hover {
+  color: #7bd3dd;
+  text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
+  transition: all 0.1s ease-in;
+}
+
+
 .missionItem{
   background-color: rgba(7, 26, 24, 0.781);
   margin:25px;
@@ -67,7 +112,8 @@
 
 .missionForm{
   max-width:400px;
-  padding:100px
+  padding:100px;
+
 }
 
 .navimage{
@@ -83,29 +129,19 @@
 }
 
 .navimage:hover{
-  // background:#21343c;
   filter: hue-rotate(225deg);
 }
-.left_style{
-  // background-color: rgb(144, 148, 144);
-  width:50%;
-}
 
-.right_style{
-  background-color: sandybrown;
-  width:50%
-}
 
-// main styles
+// // main styles
 
-.main_style{
-  // background-color: black;
-  color: darkcyan;
-  display:flex;
-  flex-direction: row;
-  min-height: 600px
-}
-
+// .main_style{
+//   color: darkcyan;
+//   display:flex;
+//   flex-direction: row;
+//   min-height: 600px;
+//   justify-content: center;
+// }
 
 a:link {
   text-decoration: none;
@@ -117,24 +153,11 @@ a:visited{
   color:white
 }
 
-.splitstyle{
-  display:flex
-}
 
-// JARVIS import elements
-
-:root {
-  // --s-loader-wrapper-bg-color: rgb(21, 22, 43);
-  // --s-loader-width: 200px;
-  // --s-loader-height: var(--s-loader-width);
-  // --s-loader-border-color-trans: rgba(29, 161, 242, 0.2);
-  // --s-loader-border-color-full: rgb(29, 161, 242);
-}
+// JARVIS 
 
 .jarvis_body {
   margin: 0;
-  // background:black;
-  // background:transparent;
   min-height: 500px;
   width: 50%;
   display: flex;
@@ -197,8 +220,6 @@ a:visited{
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-timing-function: linear;
-
-  
   position: relative;
 }
 
@@ -220,7 +241,6 @@ a:visited{
   animation-duration: 5s;
   animation-timing-function: linear;
   position: relative;
-
   animation-direction: reverse;
 }
 
@@ -240,8 +260,6 @@ a:visited{
   animation-iteration-count: infinite;
   animation-duration: 8s;
   animation-timing-function: linear;
-  // animation-direction: reverse;
-  
   position: relative;
 }
 
@@ -253,14 +271,11 @@ a:visited{
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  // background: transparent;
   animation-name: rotate-s-loader;
   animation-iteration-count: infinite;
   animation-duration: 2s;
   animation-timing-function: linear;
   position: relative;  
-  
-  // position: relative;
   
 }
 
@@ -277,11 +292,6 @@ a:visited{
   position: relative;  
 }
 
-a:hover {
-  color: #7bd3dd;
-  text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
-  transition: all 0.1s ease-in;
-}
 
 
 

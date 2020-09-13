@@ -37,7 +37,7 @@ class Register extends React.Component {
   render() {
     return (
 
-      <section className="register_style">
+      <section className="register_style ">
 
         <div>
           <div>
