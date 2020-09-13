@@ -91,6 +91,7 @@ margin: 0 25px 0 25px;
   background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
   border: 1px solid rgba(32, 178, 171, 0.726);
+  border-radius:5px;
 }
 
 
@@ -130,6 +131,11 @@ margin: 0 25px 0 25px;
   width:100%;
 }
 
+.textareabg{
+  background-color: rgba(14, 49, 43, 0.61);
+  color:rgba(32, 178, 171, 0.726);
+}
+
 a:hover {
   color: #7bd3dd;
   text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
@@ -141,6 +147,9 @@ a:hover {
   background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
   border: 1px solid rgba(32, 178, 171, 0.726);
+  margin:10px;
+  padding:10px;
+  border-radius:5px
 }
 
 .missionForm{

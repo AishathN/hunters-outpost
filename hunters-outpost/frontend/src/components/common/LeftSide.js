@@ -1,6 +1,6 @@
 import React from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+// import axios from 'axios'
+// import { Link } from 'react-router-dom'
 import Register from '../auth/Register'
 import Login from '../auth/Login'
 
@@ -8,6 +8,7 @@ import Login from '../auth/Login'
 class Left extends React.Component{
   // state to store form data
   state = {
+    
     missions: []
   }
 

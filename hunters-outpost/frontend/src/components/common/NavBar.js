@@ -10,8 +10,8 @@ const NavBar = ( ) => (
     <div>
       <Link to="/" className = "navbar-item"><img className="navimage" src={home}></img></Link>
       <Link to="/missions" className = "navbar-item"><img className="navimage" src={browse}></img></Link>
-      <a target='_blank' href = {'https://amazon.com/'}><img className="navimage" src={amazon}></img></a>
-      <a target='_blank' href = {'https://google.com/'}><img className="navimage" src={google}></img></a>
+      <a target='_blank' href = {'https://amazon.com/'} ><img className="navimage" alt="amazon" src={amazon}></img></a>
+      <a target='_blank' href = {'https://google.com/'} ><img className="navimage" alt="google" src={google}></img></a>
       
     </div>
   </nav>

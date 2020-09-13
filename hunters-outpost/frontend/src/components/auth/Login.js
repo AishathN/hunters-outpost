@@ -9,7 +9,8 @@ class Login extends React.Component {
       email: '',
       password: ''
     },
-    error: false
+    error: false,
+    username: null
   }
 
   handleChange = event => {
@@ -23,14 +24,17 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)
-      // popupNotification(`welcome back ${this.state.formData.username}`)
-      // this.props.history.push('/')
+      this.setState({ username: res.data.username})
+      this.state.history.push('/missions/')
     } catch (err) {
       this.setState({ error: true })
     }
   }
 
   render() {
+
+
+
     return (
 
       <section className="login_style">
@@ -49,34 +53,37 @@ class Login extends React.Component {
                   <label className="label">Email</label>
                   <div className="control">
                     <input
-                      placeholder="Email"
+                      // placeholder="Email"
                       name="email"
+                      className="textareabg"
                       onChange={this.handleChange}
                       value={this.state.formData.email}
                     />
                   </div>
                 </div>
-
                 <div className="field">
                   <label className="label">Password</label>
                   <div className="control">
                     <input
                       type="password"
-                      placeholder="Password"
+                      // placeholder="Password"
                       name="password"
+                      className="textareabg"
                       onChange={this.handleChange}
                       value={this.state.formData.password}
                     />
                   </div>
                 </div>
                 {this.state.error && <small>Sorry, incorrect information</small>}
+               
 
                 <div className="field">
-                  <button className="button"
+                  <button 
                     disabled={!this.state.formData.email || !this.state.formData.password}
                     type="submit">
                     Login
                   </button>
+                  {this.state.username && <small>Welcome</small>}
                 </div>
                 
               </form>

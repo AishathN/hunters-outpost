@@ -53,7 +53,8 @@ class Register extends React.Component {
                   <input
                     type="text"
                     name="username"
-                    placeholder="Username"
+                    // placeholder="Username"
+                    className="textareabg"
                     onChange={this.handleChange}
                     value={this.state.formData.username}
                   />
@@ -66,7 +67,8 @@ class Register extends React.Component {
                   <input
                     type="text"
                     name="email"
-                    placeholder="Email"
+                    className="textareabg"
+                    // placeholder="Email"
                     value={this.state.formData.email}
                     onChange={this.handleChange}
                   />
@@ -78,7 +80,8 @@ class Register extends React.Component {
                 <div className="control">
                   <input
                     type="password"
-                    placeholder="password"
+                    // placeholder="password"
+                    className="textareabg"
                     name="password"
                     value={this.state.formData.password}
                     onChange={this.handleChange}
@@ -91,7 +94,8 @@ class Register extends React.Component {
                 <div className="control">
                   <input
                     type="password"
-                    placeholder="Password Confirmation"
+                    className="textareabg"
+                    // placeholder="Password Confirmation"
                     name="password_confirmation"
                     value={this.state.formData.password_confirmation}
                     onChange={this.handleChange}
@@ -106,7 +110,8 @@ class Register extends React.Component {
                     className="input"
                     type="text"
                     name="profile_image"
-                    placeholder="www.cnn.com"
+                    // placeholder="www.cnn.com"
+                    className="textareabg"
                     value={this.state.formData.profilePicture}
                     onChange={this.handleChange}
                   />
@@ -117,7 +122,7 @@ class Register extends React.Component {
                 <label className="label">Bio</label>
                 <div className="control">
                   <textarea
-                    className="textarea input"
+                    className="textarea input textareabg"
                     name="about_me"
                     value={this.state.formData.about_me}
                     onChange={this.handleChange}

@@ -13,7 +13,7 @@ export const loginUser = formData => {
 }
 
 export const createComment = (formData, id) => {
-  return axios.post(`${baseUrl}/missions/${id}/comments/`, formData, withHeaders())
+  return axios.post(`${baseUrl}/comments/`, formData, withHeaders())
 }
 
 

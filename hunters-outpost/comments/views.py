@@ -14,7 +14,12 @@ class CommentListView(APIView):
             created_comment.save()
             return Response(created_comment.data, status=status.HTTP_201_CREATED)
         return Response(created_comment.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
+        
+    def get_comment(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+        except Comment.DoesNotExist:
+            raise NotFound()
 
 class CommentDetailView(APIView):
 
@@ -23,4 +28,6 @@ class CommentDetailView(APIView):
             return Comment.objects.get(pk=pk)
         except Comment.DoesNotExist:
             raise NotFound()
+
+
 

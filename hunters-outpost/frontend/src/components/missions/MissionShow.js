@@ -1,11 +1,11 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
-import { createComment, deleteMission } from '../../lib/api.js'
+import { createComment } from '../../lib/api.js'
 // import { isAuthenticated } from '../../lib/auth'
-import { withHeaders, getSingleMission } from '../../lib/api'
+import { getSingleMission } from '../../lib/api'
 import Jarvis from '../common/jarvis'
 
 class MissionShow extends React.Component {

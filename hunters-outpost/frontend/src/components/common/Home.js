@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import Left from '../common/LeftSide'
-import Right from '../common/RightSide'
-import { Link } from 'react-router-dom'
+// import Right from '../common/RightSide'
+// import { Link } from 'react-router-dom'
 import Jarvis from '../common/jarvis'
 
 

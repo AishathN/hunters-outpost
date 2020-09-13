@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import MissionIndex from '../src/components/missions/MissionIndex'
 import Missionnew from '../src/components/missions/Missionnew'
 import MissionShow from '../src/components/missions/MissionShow'
@@ -25,9 +25,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />
-            {/* <Route exact path="/missions/show" component={MissionShow}/> */}
             <Route exact path="/missions/:id/" component={ MissionShow } />
-            {/* <Route path="/*" component={Error} /> */}
           </Switch>
         </div>
       </BrowserRouter>

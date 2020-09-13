@@ -20,13 +20,12 @@ class Missionnew extends React.Component {
   
   handleMultiChange = selected => {
     const selectedItems = selected ? selected.map(item => item.value) : []
-    const formData = { ... this.state.formData, category: selectedItems}
+    const formData = { ...this.state.formData, category: selectedItems}
     this.setState({ formData })
   }
 
   handleSubmit = async event => {
     event.preventDefault()
-
     try {
       const res = await createMission(this.state.formData)
     } catch (err) {
