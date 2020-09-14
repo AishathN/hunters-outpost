@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from comments.serializers import CommentSerializer
+from comments.serializers import PopulatedCommentSerializer, UserSerializer
 from category.serializers import CategorySerializer
 from .models import Mission
 
@@ -11,5 +11,6 @@ class MissionSerializer(serializers.ModelSerializer):
 
 class PopulatedMissionSerializer(MissionSerializer):
 
-    comments = CommentSerializer(many=True)
+    owner = UserSerializer()
+    comments = PopulatedCommentSerializer(many=True)
     category = CategorySerializer(many=True)

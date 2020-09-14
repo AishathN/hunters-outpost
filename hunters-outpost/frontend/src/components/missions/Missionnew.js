@@ -35,9 +35,10 @@ class Missionnew extends React.Component {
 
   render() {
 
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <section className="missionForm">
+        <div><h1>SUBMIT NEW MISSION</h1></div>
             <MissionForm 
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}

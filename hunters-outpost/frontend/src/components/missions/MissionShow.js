@@ -17,7 +17,8 @@ class MissionShow extends React.Component {
       text:'',
       mission:null
     },
-    mission : null
+    mission : null,
+    missionposter: null
   }
 
 
@@ -29,7 +30,7 @@ class MissionShow extends React.Component {
       const res = await getSingleMission(missionId)
       this.setState({ thismission: res.data })
       this.setState({ comments: res.data.comments })
-      console.log(this.state)
+      this.setState({missionposter: res.data.owner.username})
     } catch (err) {
       console.log(err)
     }
@@ -49,10 +50,19 @@ class MissionShow extends React.Component {
     const res3 = await axios.get(`/api/missions/${missionId}`)
     this.setState({ thismission: res3.data })
     this.setState({ comments: res3.data.comments })
-    // console.log(this.state)
   }
     catch (err) {
       console.log(err.response.data) 
+    }
+  }
+
+  handleDelete = async () => {
+    const missionId = this.props.match.params.id
+    try {
+      await missionId(missionId)
+      this.props.history.push('/missions')
+    } catch (err) {
+      console.log(err.response.data)
     }
   }
 
@@ -63,19 +73,22 @@ class MissionShow extends React.Component {
         <div className="wrapper">
         <div className="left_style">
         <PerfectScrollbar>
-          <div>
           <div className="mission_detail">
             <h1>{this.state.thismission.name}</h1>
             <h4>{this.state.thismission.description}</h4>
+            <div className="missionImage wrap">
+            <img src={this.state.thismission.image}></img>
+            </div>
+            <h4>Posted by - {this.state.missionposter}</h4>
               <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
               return (
                 <div key={eachcomment.createdAt}>
-                <h4> --- {eachcomment.text} </h4>
+                <h4> --- {eachcomment.text} - {eachcomment.owner.username}</h4>
                 </div>
                   )})}
                   <form className="commentform" onSubmit={this.handleSubmit}>
                 <textarea
-                  className="textarea"
+                  className="textarea textareabg"
                   name="text"
                   type="text"
                   onChange={this.handleChange}
@@ -87,7 +100,6 @@ class MissionShow extends React.Component {
               </form>  
                   </div>
               
-              </div>
               </div>
         </PerfectScrollbar>
         

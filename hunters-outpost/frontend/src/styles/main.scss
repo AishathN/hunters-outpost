@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 
 body {
-  // display:flex;
-  // width:100vh;
+  background-color: black;
   justify-content: center;
   align-items: center;
-  font-family: 'Megrim', cursive
+  font-family: 'Megrim', cursive;
+  color: cadetblue;
 }
 
 .mission_style{
@@ -27,18 +27,18 @@ body {
   color: cadetblue;
   border-radius:5px;
   justify-content: center;
-  width:40%;
-  margin:100px 10px;
+  max-width:40%;
+  margin:100px 10px 0px;
+  max-height:160px
 }
 
 .wrapper{
 display:flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-evenly;;
 align-items: stretch;
-min-height:500px;
-max-width:100%;
-// margin:100px 0 0 0;
+min-height:550px;
+// max-width:90%;
 }
 
 .left_style{
@@ -95,14 +95,14 @@ margin: 0 25px 0 25px;
 
 .mission_detail{
   height: 500px;
-  max-width:400px;
+  max-width:600px;
   display:flex;
   flex-direction: column;
   color: cadetblue;
   padding:0px 5px;
-  background-color: rgba(7, 26, 24, 0.781);
+  // background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
-  border: 1px solid rgba(32, 178, 171, 0.726);
+  // border: 1px solid rgba(32, 178, 171, 0.726);
   border-radius:5px;
 }
 
@@ -114,6 +114,34 @@ margin: 0 25px 0 25px;
   background-color:rgba(14, 49, 43, 0.61);
   color:black
 }
+.newComment_style{
+  background-color:rgba(14, 49, 43, 0.61);
+  color:rgb(142, 242, 249)
+}
+
+.missionImage{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  background-color:rgba(8, 22, 20, 0.747);
+  border-radius:5px;
+  padding:25px 0px
+}
+
+.missionImage img:hover{
+  filter: grayscale(25%);
+  transition: 0.3s;
+}
+
+.missionImage img{
+
+  filter: grayscale(80%);
+  max-width:80%;
+  max-height: 250px;
+}
+
+
 
 
 // app js styles
@@ -125,7 +153,7 @@ margin: 0 25px 0 25px;
   background-size: cover;
   background-position: center;
   position:relative;
-  color:black
+  // color:black
 }
 
 .body{
@@ -136,11 +164,14 @@ margin: 0 25px 0 25px;
 
 .navbar_style{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color:rgba(10, 20, 23, 0.61);
   color:black;
-  height:250px;
+  height:200px;
   width:100%;
+  display:flex;
+  justify-content: center;
+  // align-items: center;
 }
 
 .textareabg{
@@ -167,16 +198,16 @@ a:hover {
 .missionForm{
   width:50%;
   max-width:400px;
-  padding:50px;
-  margin:100px 0px
-
+  padding:20px;
+  margin:40px 0px;
+  // border: 1px solid rgba(32, 178, 171, 0.726);ß
+  border-radius:5px
 }
 
 .navimage{
   max-height: 50px;
   padding:20px;
-  margin:10px
-
+  margin:10px;
 }
 
 .textyfield{
@@ -313,6 +344,7 @@ a:visited{
   align-items: center;
   justify-content: center;
   background: #afd2d6;
+  transition: 0.3s;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -321,6 +353,25 @@ a:visited{
   animation-duration: 2s;
   animation-timing-function: linear;
   position: relative;  
+  
+}
+
+.jarvis_core:hover{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition: 0.3s;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  position: relative;  
+  animation-name: colour_ease2 3s infinite ease-in-out;
+  box-shadow: 0px 0px 55px 55px rgba(227, 252, 252, 0.589);
   
 }
 
@@ -337,6 +388,11 @@ a:visited{
   position: relative;  
 }
 
+@keyframes colour_ease2 {
+  0% { background: rgba(2,254,255,1); }
+  50% { background: rgba(2,254,255,0.3); }
+  100% { background: rgba(2,254,255,1); }
+}
 
 
 

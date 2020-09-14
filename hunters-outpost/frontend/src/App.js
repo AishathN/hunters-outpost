@@ -22,19 +22,15 @@ class App extends React.Component{
       <div>
       <BrowserRouter>
         <NavBar />
-        <div>
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />
             <Route exact path="/missions/:id/" component={ MissionShow } />
           </Switch>
-        </div>
       </BrowserRouter>
-      <div>
         <div className="wrapper">
           <About></About>
           <Missionnew></Missionnew>
-        </div>
       </div>
     </div>
     </div>

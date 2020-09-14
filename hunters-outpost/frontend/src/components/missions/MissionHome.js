@@ -18,7 +18,7 @@ class MissionHome extends React.Component {
     try {
       const res = await axios.get('/api/missions')
       this.setState({ missions: res.data })
-      console.log(this.state)
+      // console.log(this.state)
     } catch (err) {
       console.log(err)
     }
@@ -27,7 +27,7 @@ class MissionHome extends React.Component {
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className="wrapper">
         <div className="left_style">
@@ -37,7 +37,6 @@ class MissionHome extends React.Component {
               return (
                 <div key={name.id} className="missionItem">
                   <MissionCard key={name.id} {...name}/>
-                  {name.id}
                 </div>
               )
             })}

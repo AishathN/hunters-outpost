@@ -19,7 +19,7 @@ class MissionIndex extends React.Component {
     try {
       const res = await axios.get('/api/missions')
       this.setState({ missions: res.data })
-      console.log(this.state)
+      // console.log(this.state)
     } catch (err) {
       console.log(err)
     }
@@ -29,10 +29,8 @@ class MissionIndex extends React.Component {
 
   render() {
     return (
-      <div>
-    <div><MissionHome>
-      </MissionHome></div>
-      </div>
+    <MissionHome>
+      </MissionHome>
     )
   }
 }

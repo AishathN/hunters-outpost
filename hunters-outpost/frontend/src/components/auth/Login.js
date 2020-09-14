@@ -74,7 +74,7 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
-                {this.state.error && <small>Sorry, incorrect information</small>}
+                {/* {this.state.error==true && <small>Sorry, incorrect information</small>} */}
                
 
                 <div className="field">
