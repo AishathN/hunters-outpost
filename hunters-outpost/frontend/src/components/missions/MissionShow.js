@@ -4,8 +4,8 @@ import axios from 'axios'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import { createComment } from '../../lib/api.js'
-// import { isAuthenticated } from '../../lib/auth'
-import { getSingleMission } from '../../lib/api'
+import { isAuthenticated , getUserId} from '../../lib/auth'
+import { getSingleMission , deleteMission} from '../../lib/api'
 import Jarvis from '../common/jarvis'
 
 class MissionShow extends React.Component {
@@ -19,7 +19,9 @@ class MissionShow extends React.Component {
     },
     mission : null,
     missionposter: null,
-    category:[]
+    category:[],
+    missionposterid: null,
+    owner:false,
   }
 
 
@@ -31,13 +33,29 @@ class MissionShow extends React.Component {
       const res = await getSingleMission(missionId)
       this.setState({ thismission: res.data })
       this.setState({ comments: res.data.comments })
-      this.setState({missionposter: res.data.owner.username})
+      this.setState({ missionposter: res.data.owner.username})
       this.setState({ category: res.data.category })
+      this.setState({ missionposterid: res.data.owner.id})
+      
     } catch (err) {
       console.log(err)
     }
+    // const currentUser = getUserId()
+    // console.log(currentUser)
+    // console.log(this.state.missionposterid)
+    // if (getUserId() == this.state.missionposterId){
+    //   this.setState({owner:true})
+    //   console.log(this.state.owner)
+    // }
     
   }
+
+  isOwnerOrNot = ()=> {
+    if (getUserId() == this.state.missionposterId){
+      console.log(true)
+    }
+    
+ }
 
   handleChange = mission => {
     const formData = { ...this.state.formData, [mission.target.name]: mission.target.value , mission: this.state.mission}
@@ -61,15 +79,15 @@ class MissionShow extends React.Component {
   handleDelete = async () => {
     const missionId = this.props.match.params.id
     try {
-      await missionId(missionId)
+      await deleteMission(missionId)
+      this.props.history.push('/missions')
     } catch (err) {
       console.log(err.response.data)
     }
   }
 
     render() {
-
-      console.log(this.state.thismission.category)
+    console.log(getUserId() == this.state.missionposterid)
       return (
         <div className="wrapper">
         <div className="left_style">
@@ -83,16 +101,17 @@ class MissionShow extends React.Component {
             <div className="missionImage wrap">
             <img src={this.state.thismission.image}></img>
             </div>
-            <h4>Posted by - {this.state.missionposter}</h4>
+            <h4>Posted by - {this.state.missionposter} </h4> 
+            {(getUserId() == this.state.missionposterid) && <button onClick={this.handleDelete} className="buttonstyle">Delete</button>}
               <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
               return (
                 <div key={eachcomment.createdAt}>
                 <h4> --- {eachcomment.text} - {eachcomment.owner.username}</h4>
                 </div>
                   )})}
-                  <form className="commentform" onSubmit={this.handleSubmit}>
+                  {isAuthenticated() && <form className="commentform" onSubmit={this.handleSubmit}>
                 <textarea
-                  className="textarea textareabg"
+                  className="input textyfield textareabg"
                   name="text"
                   type="text"
                   onChange={this.handleChange}
@@ -101,7 +120,7 @@ class MissionShow extends React.Component {
                 <div>
               <input type="submit" value="Submit" className="button2"/>
                 </div>
-              </form>  
+              </form>  }
                   </div>
               
               </div>

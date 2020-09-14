@@ -29,7 +29,7 @@ class Login extends React.Component {
       // this.setState({ username: res.data.username})
       this.setState({divmessage: res.data.message})
       // this.state.history.push('/missions')
-      this.props.history.push("/missions/")
+      this.props.history.push('/missions')
     } catch (err) {
       this.setState({ error: true })
     }

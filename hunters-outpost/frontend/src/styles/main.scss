@@ -18,14 +18,10 @@ body {
 .flicker{
 	animation:flicker 0.8s infinite;
 }
-// @keyframes flicker{
-//   0%{		color: rgb(44, 108, 113);	}
-//   28%{		color: rgb(44, 108, 113);	}
-// 	39%{	color: transparent;	}
-// 	50%{	color: rgb(44, 108, 113)	}
-// 	99%{	color: rgb(44, 108, 113)	}
-// 	100%{	color: rgb(44, 108, 113)	}
-// }
+
+.buttonstyle{
+  max-width:100px;
+}
 
 .commentform{
   max-width:200px
