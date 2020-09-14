@@ -37,13 +37,12 @@ class MissionShow extends React.Component {
   }
 
   handleChange = mission => {
-    const formData = { ...this.state.formData, [mission.target.name]: mission.target.value }
+    const formData = { ...this.state.formData, [mission.target.name]: mission.target.value , mission: this.state.mission}
     this.setState({ formData })
   }
 
   handleSubmit = async event => {
     event.preventDefault()
-    this.setState({...this.state.formData, mission: this.state.mission})
     const missionId = this.props.match.params.id
     try {
     const res = await createComment(this.state.formData)
