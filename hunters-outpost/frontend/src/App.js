@@ -7,6 +7,7 @@ import Home from '../src/components/common/Home'
 // import Select from 'react-select'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from '../src/components/common/NavBar'
+import About from '../src/components/common/About'
 
 class App extends React.Component{
 
@@ -31,6 +32,7 @@ class App extends React.Component{
       </BrowserRouter>
       <div>
         <div className="wrapper">
+          <About></About>
           <Missionnew></Missionnew>
         </div>
       </div>

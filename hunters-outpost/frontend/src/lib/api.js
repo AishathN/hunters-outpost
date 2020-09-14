@@ -13,6 +13,8 @@ export const loginUser = formData => {
 }
 
 export const createComment = (formData, id) => {
+  console.log(formData)
+  console.log(withHeaders())
   return axios.post(`${baseUrl}/comments/`, formData, withHeaders())
 }
 
@@ -28,6 +30,8 @@ export const getAllMissions = () => {
 }
 
 export const createMission = formData => {
+  console.log(formData)
+  console.log(withHeaders())
   return axios.post(`${baseUrl}/missions/`, formData, withHeaders())
 }
 

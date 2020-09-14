@@ -19,13 +19,25 @@ body {
   max-width:200px
 }
 
+.about{
+  
+  background-color: rgba(7, 26, 24, 0.781);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  padding: 10px;
+  color: cadetblue;
+  border-radius:5px;
+  justify-content: center;
+  width:40%;
+  margin:100px 10px;
+}
+
 .wrapper{
 display:flex;
 flex-direction: row;
-justify-content: flex-end;
+justify-content: center;
 align-items: stretch;
 min-height:500px;
-max-width:80%;
+max-width:100%;
 // margin:100px 0 0 0;
 }
 
@@ -153,8 +165,10 @@ a:hover {
 }
 
 .missionForm{
+  width:50%;
   max-width:400px;
-  padding:100px;
+  padding:50px;
+  margin:100px 0px
 
 }
 

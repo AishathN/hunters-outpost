@@ -20,12 +20,12 @@ class Login extends React.Component {
   }
 
   handleSubmit = async event => {
-    // event.preventDefault()
+    event.preventDefault()
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)
       this.setState({ username: res.data.username})
-      this.state.history.push('/missions/')
+      this.state.history.push('/missions')
     } catch (err) {
       this.setState({ error: true })
     }

@@ -9,6 +9,7 @@ from .serializers import CommentSerializer
 class CommentListView(APIView):
 
     def post(self, request):
+        request.data['owner'] = request.user.id
         created_comment = CommentSerializer(data=request.data)
         if created_comment.is_valid():
             created_comment.save()

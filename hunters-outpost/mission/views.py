@@ -16,6 +16,8 @@ class MissionListView(APIView):
         return Response(serialized_missions.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        request.data['owner'] = request.user.id
+        print(request.data)
         new_mission = MissionSerializer(data=request.data)
         if new_mission.is_valid():
             new_mission.save()

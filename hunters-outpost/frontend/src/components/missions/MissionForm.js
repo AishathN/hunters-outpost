@@ -6,6 +6,8 @@ const options = [
   { value: 4, label: 'Art' },
   { value: 7, label: 'Books' },
   { value: 8, label: 'Movies' },
+  { value: 9, label: 'Music' },
+  { value: 10, label: 'Clothing' },
   { value: 13, label: 'Household' },
   { value: 17, label: 'Vehicles' },
   { value: 6, label: 'Experiences' },

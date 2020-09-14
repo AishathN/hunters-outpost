@@ -11,11 +11,13 @@ import Jarvis from '../common/jarvis'
 class MissionShow extends React.Component {
   state = {
     usersLink:[],
-    mission: [],
+    thismission: [],
     comments: [],
     formData:{
       text:'',
-    }
+      mission:null
+    },
+    mission : null
   }
 
 
@@ -23,19 +25,15 @@ class MissionShow extends React.Component {
 
     try {
       const missionId = this.props.match.params.id
+      this.setState ({mission: parseInt(missionId)})
       const res = await getSingleMission(missionId)
-      this.setState({ mission: res.data })
+      this.setState({ thismission: res.data })
       this.setState({ comments: res.data.comments })
       console.log(this.state)
     } catch (err) {
       console.log(err)
     }
-    // try {
-    //   const resuser = await axios.get('/api/auth/users/')
-    //   this.setState({ usersLink: resuser.data})
-    // } catch (err) {
-    //   console.log(err)
-    // }
+    
   }
 
   handleChange = mission => {
@@ -45,13 +43,14 @@ class MissionShow extends React.Component {
 
   handleSubmit = async event => {
     event.preventDefault()
+    this.setState({...this.state.formData, mission: this.state.mission})
     const missionId = this.props.match.params.id
     try {
-    const res = await createComment(this.state.formData, missionId)
+    const res = await createComment(this.state.formData)
     const res3 = await axios.get(`/api/missions/${missionId}`)
-    this.setState({ mission: res3.data })
+    this.setState({ thismission: res3.data })
     this.setState({ comments: res3.data.comments })
-    console.log(this.state)
+    // console.log(this.state)
   }
     catch (err) {
       console.log(err.response.data) 
@@ -60,15 +59,15 @@ class MissionShow extends React.Component {
 
     render() {
 
-      console.log(this.state)
+      // console.log(this.state)
       return (
         <div className="wrapper">
         <div className="left_style">
         <PerfectScrollbar>
           <div>
           <div className="mission_detail">
-            <h1>{this.state.mission.name}</h1>
-            <h4>{this.state.mission.description}</h4>
+            <h1>{this.state.thismission.name}</h1>
+            <h4>{this.state.thismission.description}</h4>
               <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
               return (
                 <div key={eachcomment.createdAt}>
