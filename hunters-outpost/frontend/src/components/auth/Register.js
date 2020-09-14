@@ -13,7 +13,8 @@ class Register extends React.Component {
       password: '',
       password_confirmation: ''
     },
-    errors: {}
+    errors: {},
+    divMessage:''
   }
 
 
@@ -28,6 +29,7 @@ class Register extends React.Component {
     event.preventDefault()
     try {
       await registerUser(this.state.formData)
+      this.setState({divMessage: '   SUCCESS   '})
       // this.props.history.push('/login')
     } catch (err) {
       console.log('error occured', err)
@@ -36,7 +38,7 @@ class Register extends React.Component {
   
   render() {
     return (
-
+      <div>
       <section className="register_style ">
 
         <div>
@@ -132,12 +134,15 @@ class Register extends React.Component {
 
               <div className="field">
                 <button type="submit" className="button">Sign Up</button>
+                {this.state.divMessage}
               </div>
 
             </form>
           </div>
         </div>
       </section>
+      <div></div>
+      </div>
     )
   }
 }

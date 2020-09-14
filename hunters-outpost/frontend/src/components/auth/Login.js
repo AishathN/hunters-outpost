@@ -1,6 +1,7 @@
 import React from 'react'
 import { loginUser } from '../../lib/api'
 import { setToken } from "../../lib/auth"
+import { Link } from 'react-router-dom'
 // import { popupNotification } from '../../lib/notification'
 
 class Login extends React.Component {
@@ -10,13 +11,14 @@ class Login extends React.Component {
       password: ''
     },
     error: false,
-    username: null
+    username: null,
+    divmessage: ''
   }
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     this.setState({ formData, error: false })
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   handleSubmit = async event => {
@@ -24,8 +26,10 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)
-      this.setState({ username: res.data.username})
-      this.state.history.push('/missions')
+      // this.setState({ username: res.data.username})
+      this.setState({divmessage: res.data.message})
+      // this.state.history.push('/missions')
+      this.props.history.push("/missions/")
     } catch (err) {
       this.setState({ error: true })
     }
@@ -36,6 +40,7 @@ class Login extends React.Component {
 
 
     return (
+      <div>
 
       <section className="login_style">
 
@@ -83,14 +88,18 @@ class Login extends React.Component {
                     type="submit">
                     Login
                   </button>
-                  {this.state.username && <small>Welcome</small>}
+                 
                 </div>
                 
               </form>
+              
           </div>
         </div>
-
+        
       </section>
+      <h3>{this.state.divmessage}</h3>
+      <h3>Please <Link to="/missions">browse</Link> or set a search.</h3>
+      </div>
     )
   }
 }

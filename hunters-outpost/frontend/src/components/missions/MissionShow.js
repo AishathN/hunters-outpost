@@ -18,7 +18,8 @@ class MissionShow extends React.Component {
       mission:null
     },
     mission : null,
-    missionposter: null
+    missionposter: null,
+    category:[]
   }
 
 
@@ -31,6 +32,7 @@ class MissionShow extends React.Component {
       this.setState({ thismission: res.data })
       this.setState({ comments: res.data.comments })
       this.setState({missionposter: res.data.owner.username})
+      this.setState({ category: res.data.category })
     } catch (err) {
       console.log(err)
     }
@@ -60,7 +62,6 @@ class MissionShow extends React.Component {
     const missionId = this.props.match.params.id
     try {
       await missionId(missionId)
-      this.props.history.push('/missions')
     } catch (err) {
       console.log(err.response.data)
     }
@@ -68,7 +69,7 @@ class MissionShow extends React.Component {
 
     render() {
 
-      // console.log(this.state)
+      console.log(this.state.thismission.category)
       return (
         <div className="wrapper">
         <div className="left_style">
@@ -76,6 +77,9 @@ class MissionShow extends React.Component {
           <div className="mission_detail">
             <h1>{this.state.thismission.name}</h1>
             <h4>{this.state.thismission.description}</h4>
+           <div><p>Listed in : </p>{this.state.category.map(item => {
+              return (
+              <h3 key={item.id}>  {item.name}  </h3>)})} </div>
             <div className="missionImage wrap">
             <img src={this.state.thismission.image}></img>
             </div>

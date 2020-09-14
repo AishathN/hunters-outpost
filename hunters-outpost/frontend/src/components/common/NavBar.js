@@ -6,7 +6,15 @@ import google from '../../assets/images/google.png'
 import ebay from '../../assets/images/ebay.png'
 import home from '../../assets/images/home1.png'
 
-const NavBar = ( ) => (
+
+class NavBar extends React.Component{
+  
+  state = {
+  }
+
+
+render(){
+  return (
   <nav className ="navbar_style"> 
     <div>
       <Link to="/" className = "navbar-item"><img className="navimage" src={home}></img></Link>
@@ -17,5 +25,7 @@ const NavBar = ( ) => (
       
     </div>
   </nav>
-) 
+  )
+}
+}
 export default NavBar

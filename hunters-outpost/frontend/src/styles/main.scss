@@ -15,6 +15,18 @@ body {
   max-height:700px;
 }
 
+.flicker{
+	animation:flicker 0.8s infinite;
+}
+// @keyframes flicker{
+//   0%{		color: rgb(44, 108, 113);	}
+//   28%{		color: rgb(44, 108, 113);	}
+// 	39%{	color: transparent;	}
+// 	50%{	color: rgb(44, 108, 113)	}
+// 	99%{	color: rgb(44, 108, 113)	}
+// 	100%{	color: rgb(44, 108, 113)	}
+// }
+
 .commentform{
   max-width:200px
 }
@@ -35,7 +47,7 @@ body {
 .wrapper{
 display:flex;
 flex-direction: row;
-justify-content: space-evenly;;
+justify-content: space-evenly;
 align-items: stretch;
 min-height:550px;
 // max-width:90%;
@@ -100,7 +112,7 @@ margin: 0 25px 0 25px;
   flex-direction: column;
   color: cadetblue;
   padding:0px 5px;
-  // background-color: rgba(7, 26, 24, 0.781);
+  background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
   // border: 1px solid rgba(32, 178, 171, 0.726);
   border-radius:5px;
