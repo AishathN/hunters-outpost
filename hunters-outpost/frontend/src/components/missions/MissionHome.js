@@ -6,7 +6,7 @@ import Jarvis from '../common/jarvis'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import 'react-perfect-scrollbar/dist/css/styles.css'
-import Leaderboard from './Leadboard'
+import Leaderboard from './Leaderboard'
 
 class MissionHome extends React.Component {
   // state to store form data

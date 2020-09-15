@@ -53,10 +53,11 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
               />
             </div>
           </div>
+          {/* <label className="label">CATEGORIES</label> */}
           <div className="field">
                 <div className="control">
                   <Select options={options}
-                  onChange={handleMultiChange}
+                  onChange={handleMultiChange} placeholder="Categories"
                   isMulti />
                 </div>
               </div>

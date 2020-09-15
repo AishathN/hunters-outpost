@@ -5,6 +5,7 @@ import browse from '../../assets/images/browse1.png'
 import google from '../../assets/images/google.png'
 import ebay from '../../assets/images/ebay.png'
 import home from '../../assets/images/home1.png'
+import Clock from './Clock'
 
 
 class NavBar extends React.Component{
@@ -12,11 +13,15 @@ class NavBar extends React.Component{
   state = {
   }
 
+  
+
 
 render(){
   return (
   <nav className ="navbar_style"> 
+  <Clock/>
     <div>
+      <Link to="/profile" className = "navbar-item"><img className="navimage" src={home}></img></Link>
       <Link to="/" className = "navbar-item"><img className="navimage" src={home}></img></Link>
       <Link to="/missions" className = "navbar-item"><img className="navimage" src={browse}></img></Link>
       <a target='_blank' href = {'https://amazon.com/'} ><img className="navimage" alt="amazon" src={amazon}></img></a>

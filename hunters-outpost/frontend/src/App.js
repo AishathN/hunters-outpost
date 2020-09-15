@@ -8,7 +8,8 @@ import Home from '../src/components/common/Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from '../src/components/common/NavBar'
 import About from '../src/components/common/About'
-import Leaderboard from './components/missions/Leadboard'
+import Leaderboard from './components/missions/Leaderboard'
+import Profile from './components/common/Profile'
 
 class App extends React.Component{
 
@@ -24,6 +25,7 @@ class App extends React.Component{
       <BrowserRouter>
         <NavBar />
           <Switch>
+            <Route exact path="/profile" component={ Profile } />
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />
             <Route exact path="/missions/:id/" component={ MissionShow } />

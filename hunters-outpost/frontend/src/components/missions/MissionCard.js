@@ -5,7 +5,7 @@ const MissionCard = ({ name, image, description, category, id, comments }) => (
   
 <div>
   <Link to={`/missions/${id}/`}>
-    <div>{name}</div>
+    <div><h3 className="missionTitle">{name}</h3></div>
   </Link>
     <div>{description}</div>
     <div></div>

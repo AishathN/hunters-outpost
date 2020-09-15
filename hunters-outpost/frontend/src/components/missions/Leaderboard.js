@@ -15,7 +15,10 @@ class Leaderboard extends React.Component{
     try {
       const res = await getAllUsers()
       this.setState({ users: res.data })
-      console.log(this.state)
+      // console.log(this.state.users)
+      this.setState({users:this.state.users.sort(function(a, b) {
+        return b.points - a.points;
+    })})
     } catch (err) {
       console.log(err)
     }
@@ -27,7 +30,7 @@ class Leaderboard extends React.Component{
       <div className="leaderboard">
         <h1>LEADERBOARD</h1>
         <PerfectScrollbar>
-      {this.state.users.slice(0).reverse().map(eachuser => {
+      {this.state.users.map(eachuser => {
         return (
           <div key={eachuser.id}>
           <h4> --- {eachuser.points} - {eachuser.username}</h4>

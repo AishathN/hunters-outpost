@@ -7,7 +7,7 @@ import { createComment } from '../../lib/api.js'
 import { isAuthenticated , getUserId} from '../../lib/auth'
 import { getSingleMission , deleteMission, getSingleUser } from '../../lib/api'
 import Jarvis from '../common/jarvis'
-import Leaderboard from './Leadboard.js'
+import Leaderboard from './Leaderboard.js'
 
 class MissionShow extends React.Component {
   state = {
@@ -52,12 +52,6 @@ class MissionShow extends React.Component {
     
   }
 
-  isOwnerOrNot = ()=> {
-    if (getUserId() == this.state.missionposterId){
-      console.log(true)
-    }
-    
- }
 
   handleChange = mission => {
     const formData = { ...this.state.formData, [mission.target.name]: mission.target.value , mission: this.state.mission}

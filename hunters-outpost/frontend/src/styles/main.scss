@@ -15,15 +15,66 @@ body {
   max-height:700px;
 }
 
+.profileImage{
+  width:450px;
+  max-height:300px;
+  filter: saturate(20%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImageDiv{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage:hover{
+  filter:saturate(80%)
+}
+
 .leaderboard {
   max-height:200px;
+  padding:50px
 }
+
+.clock {
+  padding:0 100px;
+  min-height: 100vh;
+  }
+
+.Time {
+  width: 200px;
+  margin: 15px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: rgba(96, 222, 222, 0.76);
+  font-size: 30px;
+  padding:0 100px;
+  filter: brightness(200%);
+  text-shadow: 0 0 15px #fefefeb0;
+  }
+
+.leaderboard h4:hover{
+  filter: brightness(200%);
+  filter: sepia();
+}
+
+.leaderboard h1:hover{
+  filter: brightness(200%);
+  filter: sepia();
+}
+
+.missionTitle h3{
+  filter: brightness(200%);
+  }
+
 .leaderboard h1{
-  color:  rgba(255, 224, 98, 0.5);
-  text-shadow: 0 0 15px #fefefee7;
+  color:  rgba(167, 254, 255, 0.564);
+  text-shadow: 0 0 15px #fefefec0;
 }
 .leaderboard h4{
-  color: rgba(255, 224, 98, 0.658);
+  color:rgba(198, 254, 255, 0.564);
   text-shadow: 0 0 15px #fefefeb0;
 }
 
@@ -31,8 +82,14 @@ body {
 	animation:flicker 0.8s infinite;
 }
 
-.buttonstyle{
+button {
   max-width:100px;
+  background-color: rgba(122, 242, 204, 0.865);
+}
+
+.button2{
+  max-width:100px;
+  background-color: rgba(122, 242, 204, 0.865);
 }
 
 .commentform{
@@ -58,14 +115,12 @@ flex-direction: row;
 justify-content: space-evenly;
 align-items: stretch;
 min-height:550px;
-// max-width:90%;
 }
 
 .left_style{
   display:flex;
   justify-content: center;
   width:40%;
-  // margin:100px 0 0 100px;
 }
 
 .right_style{
@@ -104,8 +159,6 @@ margin: 0 25px 0 25px;
 
 .splitstyle{
   display:flex;
-  // justify-content: space-around;
-  
 }
 
 .mission_spacer{
@@ -122,7 +175,6 @@ margin: 0 25px 0 25px;
   padding:0px 5px;
   background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
-  // border: 1px solid rgba(32, 178, 171, 0.726);
   border-radius:5px;
 }
 
@@ -162,8 +214,6 @@ margin: 0 25px 0 25px;
 }
 
 
-
-
 // app js styles
 
 .app_style{
@@ -173,7 +223,6 @@ margin: 0 25px 0 25px;
   background-size: cover;
   background-position: center;
   position:relative;
-  // color:black
 }
 
 .body{
@@ -215,6 +264,16 @@ a:hover {
   border-radius:5px
 }
 
+.missionItem h3:hover{
+    color:  rgba(167, 254, 255, 0.564);
+    text-shadow: 0 0 15px #fefefec0;
+  color:rgba(230, 238, 238, 0.932);
+  filter: brightness(200%);
+}
+
+
+
+
 .missionForm{
   width:50%;
   max-width:400px;
@@ -233,10 +292,15 @@ a:hover {
 .textyfield{
   min-width:350px;
   min-height:100px;
+  font-size:18px
+}
+
+.input{
+  font-size:16px
 }
 
 .navimage:hover{
-  filter: hue-rotate(235deg);
+  filter: brightness(500%);
 }
 
 a:link {
@@ -246,7 +310,7 @@ a:link {
 
 a:visited{
   text-decoration: none;
-  color:white
+  color:rgb(82, 237, 227)
 }
 
 
