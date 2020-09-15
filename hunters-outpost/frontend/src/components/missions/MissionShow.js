@@ -5,7 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import { createComment } from '../../lib/api.js'
 import { isAuthenticated , getUserId} from '../../lib/auth'
-import { getSingleMission , deleteMission} from '../../lib/api'
+import { getSingleMission , deleteMission, getSingleUser} from '../../lib/api'
 import Jarvis from '../common/jarvis'
 
 class MissionShow extends React.Component {
@@ -22,6 +22,7 @@ class MissionShow extends React.Component {
     category:[],
     missionposterid: null,
     owner:false,
+    commenterData:[]
   }
 
 
@@ -86,8 +87,23 @@ class MissionShow extends React.Component {
     }
   }
 
+  handleUpvote = async (userid) => {
+    try {
+        const res = await (getSingleUser(userid))
+        this.setState({ commenterData: res.data})
+        console.log(res.data)
+    } catch (err) {
+      console.log(err)  
+    }
+  }
+
+  //on button click 
+  //get userdata for commenter (eachcomment.owner.id)
+  //modify userdata (points plus one)
+  //send userdata in put request to db
+
+
     render() {
-    console.log(getUserId() == this.state.missionposterid)
       return (
         <div className="wrapper">
         <div className="left_style">
@@ -95,7 +111,7 @@ class MissionShow extends React.Component {
           <div className="mission_detail">
             <h1>{this.state.thismission.name}</h1>
             <h4>{this.state.thismission.description}</h4>
-           <div><p>Listed in : </p>{this.state.category.map(item => {
+            <div><p>Listed in : </p>{this.state.category.map(item => {
               return (
               <h3 key={item.id}>  {item.name}  </h3>)})} </div>
             <div className="missionImage wrap">
@@ -106,7 +122,7 @@ class MissionShow extends React.Component {
               <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
               return (
                 <div key={eachcomment.createdAt}>
-                <h4> --- {eachcomment.text} - {eachcomment.owner.username}</h4>
+                <h4> --- {eachcomment.text} - {eachcomment.owner.username} {(getUserId() == this.state.missionposterid) && <button onClick={() => this.handleUpvote(eachcomment.owner.id)}> - upvote </button>}</h4>
                 </div>
                   )})}
                   {isAuthenticated() && <form className="commentform" onSubmit={this.handleSubmit}>

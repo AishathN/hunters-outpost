@@ -64,6 +64,28 @@ class UserView(APIView):
         serialized_user = UserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
 
+    # def put(self, request, pk):
+    #     user_to_update = self.get_user(pk=pk)
+    #     updated_user = UserSerializer(user_to_update, data=request.data)
+        # if updated_user.is_valid():
+        #     updated_user.save()
+        #     return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
+    #     return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+    def put(self, request, pk):
+        print(request.data)
+        user_to_update = User.objects.get(pk=pk)
+        user_to_update.points = user_to_update.points + 1
+        print(user_to_update.points)
+        user_to_update.save()
+        serialized_user = UserSerializer(user_to_update)
+        # if serialized_user.is_valid():
+        #     serialized_user.save()
+        return Response(serialized_user.data, status=status.HTTP_202_ACCEPTED)
+        # return Response(serialized_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        # return Response({"message": "Hello World"})
+        
+
 class UserSpecificView(APIView):
 
     def get(self, request):
