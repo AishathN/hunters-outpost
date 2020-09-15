@@ -15,6 +15,18 @@ body {
   max-height:700px;
 }
 
+.leaderboard {
+  max-height:200px;
+}
+.leaderboard h1{
+  color:  rgba(255, 224, 98, 0.5);
+  text-shadow: 0 0 15px #fefefee7;
+}
+.leaderboard h4{
+  color: rgba(255, 224, 98, 0.658);
+  text-shadow: 0 0 15px #fefefeb0;
+}
+
 .flicker{
 	animation:flicker 0.8s infinite;
 }
@@ -224,7 +236,7 @@ a:hover {
 }
 
 .navimage:hover{
-  filter: hue-rotate(225deg);
+  filter: hue-rotate(235deg);
 }
 
 a:link {
@@ -248,7 +260,7 @@ a:visited{
   align-items: center;
   justify-content: center;
   min-width: 400px;
-  max-width:50%
+  max-width:40%
 }
 
 .jarvis_notched {

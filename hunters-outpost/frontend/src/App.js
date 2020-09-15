@@ -8,6 +8,7 @@ import Home from '../src/components/common/Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavBar from '../src/components/common/NavBar'
 import About from '../src/components/common/About'
+import Leaderboard from './components/missions/Leadboard'
 
 class App extends React.Component{
 

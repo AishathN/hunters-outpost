@@ -6,6 +6,7 @@ import Jarvis from '../common/jarvis'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import Leaderboard from './Leadboard'
 
 class MissionHome extends React.Component {
   // state to store form data
@@ -45,6 +46,7 @@ class MissionHome extends React.Component {
         </div>
         <div className="right_style">
           <Jarvis></Jarvis>
+          <Leaderboard></Leaderboard>
         </div>
       </div>
     )
