@@ -47,8 +47,12 @@ export const deleteMission = id => {
   return axios.delete(`${baseUrl}/missions/${id}`, withHeaders())
 }
 
-export const getSingleUser = id => {
+export const editUser = id => {
   return axios.put(`${baseUrl}/auth/users/${id}/`)
+}
+
+export const getSingleUser = id => {
+  return axios.get(`${baseUrl}/auth/users/${id}/`)
 }
 
 export const getAllUsers = () => {

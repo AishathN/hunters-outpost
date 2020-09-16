@@ -11,19 +11,22 @@ class Profile extends React.Component {
     userInfo: [],
     owner:false,
     profileId: null,
-    userNumber:null
+    userNumber:null,
+    formData:[]
   }
 
  
   async componentDidMount() {
-
+console.log("in component did mount")
     try {
       const res = await (getSingleUser(getUserId()))
+      console.log(res.data)
       this.setState({userInfo: res.data})
     } catch (err) {
       console.log(err)
     }
   }
+
 
   render(){
     console.log(this.state.userInfo)
@@ -37,6 +40,9 @@ class Profile extends React.Component {
             <div className="profileImageDiv">
             <img src = {this.state.userInfo.profile_image} className="profileImage"></img>
             </div>
+            <div>   
+             
+  </div>
         </div>
       </PerfectScrollbar>
       

@@ -13,8 +13,7 @@ class Mission(models.Model):
     owner = models.ForeignKey(
         'jwt_auth.User',
         related_name="created_mission",
-        on_delete=models.CASCADE,
-        blank=True
+        on_delete=models.CASCADE
     )
 
     def __str__(self):

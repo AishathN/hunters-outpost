@@ -10,6 +10,7 @@ import NavBar from '../src/components/common/NavBar'
 import About from '../src/components/common/About'
 import Leaderboard from './components/missions/Leaderboard'
 import Profile from './components/common/Profile'
+import Userpage from './components/common/Userpage'
 
 class App extends React.Component{
 
@@ -25,6 +26,7 @@ class App extends React.Component{
       <BrowserRouter>
         <NavBar />
           <Switch>
+            <Route exact path="/users/:id/" component={ Userpage }/>
             <Route exact path="/profile" component={ Profile } />
             <Route exact path="/" component={ Home } />
             <Route exact path="/missions" component={ MissionIndex } />

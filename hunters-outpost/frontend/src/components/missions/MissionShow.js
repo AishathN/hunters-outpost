@@ -2,10 +2,9 @@ import React from 'react'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-
 import { createComment } from '../../lib/api.js'
 import { isAuthenticated , getUserId} from '../../lib/auth'
-import { getSingleMission , deleteMission, getSingleUser } from '../../lib/api'
+import { getSingleMission , deleteMission, getSingleUser, editUser } from '../../lib/api'
 import Jarvis from '../common/jarvis'
 import Leaderboard from './Leaderboard.js'
 
@@ -82,9 +81,10 @@ class MissionShow extends React.Component {
     }
   }
 
-  handleUpvote = async (userid) => {
+  handleUpvote = async(userid) => {
+    console.log("in handleupvote")
     try {
-        const res = await (getSingleUser(userid))
+        const res = await (editUser(userid))
         this.setState({ commenterData: res.data})
         console.log(res.data)
     } catch (err) {
