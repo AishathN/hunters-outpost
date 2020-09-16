@@ -29,9 +29,9 @@ render(){
       <Link to="/profile" className = "navbar-item"><img className="navimage" src={profile}></img></Link>
       <Link to="/" className = "navbar-item"><img className="navimage" src={home}></img></Link>
       <Link to="/missions" className = "navbar-item"><img className="navimage" src={browse}></img></Link>
-      <a target='_blank' href = {'https://amazon.com/'} ><img className="navimage" alt="amazon" src={amazon}></img></a>
-      <a target='_blank' href = {'https://google.com/'} ><img className="navimage" alt="google" src={google}></img></a>
-      <a target='_blank' href = {'https://ebay.com/'} ><img className="navimage" alt="ebay" src={ebay}></img></a>
+      <a target='_blank' href = {'https://amazon.com/'} ><img className="navimage search" alt="amazon" src={amazon}></img></a>
+      <a target='_blank' href = {'https://google.com/'} ><img className="navimage search" alt="google" src={google}></img></a>
+      <a target='_blank' href = {'https://ebay.com/'} ><img className="navimage search" alt="ebay" src={ebay}></img></a>
       <Link to="/" className="navbar-item" onClick={this.handleLogout}><img className="navimage" src={logoutimg} alt="logout"></img></Link>
       
     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { createComment } from '../../lib/api.js'
 import { isAuthenticated , getUserId} from '../../lib/auth'
@@ -112,12 +112,12 @@ class MissionShow extends React.Component {
             <div className="missionImage wrap">
             <img src={this.state.thismission.image}></img>
             </div>
-            <h4>Posted by - {this.state.missionposter} </h4> 
+            <h4>Posted by -  <Link to={`/users/${this.state.missionposterid}/`}>{this.state.missionposter} </Link></h4> 
             {(getUserId() == this.state.missionposterid) && <button onClick={this.handleDelete} className="buttonstyle">Delete</button>}
               <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
               return (
                 <div key={eachcomment.createdAt}>
-                <h4> --- {eachcomment.text} - {eachcomment.owner.username}  {(getUserId() == this.state.missionposterid) && <button onClick={() => this.handleUpvote(eachcomment.owner.id)}> upvote </button>}</h4>
+                <h4> --- {eachcomment.text} -<Link to={`/users/${eachcomment.owner.id}/`}>{eachcomment.owner.username} </Link>  {(getUserId() == this.state.missionposterid) && <button onClick={() => this.handleUpvote(eachcomment.owner.id)}> upvote </button>}</h4>
                 </div>
                   )})}
                   {isAuthenticated() && <form className="commentform" onSubmit={this.handleSubmit}>

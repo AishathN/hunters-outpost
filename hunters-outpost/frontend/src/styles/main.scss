@@ -10,6 +10,9 @@ body {
   color: cadetblue;
 }
 
+.search{
+
+}
 .mission_style{
   min-height: 600px;
   max-height:700px;
@@ -18,9 +21,24 @@ body {
   max-width:100%;
   min-width:100%;
   min-height:100%;
-  max-height:100%;
-  padding:75px 75px;
+  // max-height:100%;
+  // padding:75px 75px;
 }
+
+.loghome{
+  height:80%;
+  width:100%;
+  background-image: url('../assets/images/map4.png');
+  background-repeat: no-repeat;
+  // background-color: black;
+  background-size: cover;
+  background-position: center;
+  filter:saturate(190%);
+  // filter: hue-rotate(20deg);
+  position:relative;
+  // filter: sepia(10%);
+}
+
 .profileImage{
   max-height:300px;
   filter: saturate(20%);
@@ -34,6 +52,7 @@ body {
 .profile_detail{
   min-width:500px;
   max-width:500px;
+  background-color: rgba(7, 26, 24, 0.781);
 }
 
 .profileImageDiv{
@@ -179,13 +198,14 @@ margin: 0 25px 0 25px;
 }
 
 .mission_spacer{
-  max-height:400px
+  max-height:400px;
 }
 
 
 .mission_detail{
   height: 500px;
   max-width:600px;
+  min-width: 400px;
   display:flex;
   flex-direction: column;
   color: cadetblue;
@@ -603,7 +623,7 @@ a:visited{
   border: 2px solid rgba(29, 161, 242, 0.2);
   border-left-color: rgba(29, 160, 242, 0.514);
   // border-right-color: rgb(29, 161, 242);
-  border-top-color: rgb(29, 161, 242, );
+  border-top-color: rgb(29, 192, 242);
   border-radius: 50%;
   background: transparent;
   animation-name: rotate-s-loader;
@@ -677,4 +697,33 @@ a:visited{
   to {
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (max-width: 1100px) {
+  .leaderboard {
+    display: none;
+  }
+
+  .navbar_style {}
+
+  .search{
+    display:none
+  }
+
+  .left_style{
+    width:100%
+  }
+  .wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about{
+    display:none
+  }
+
+  .jarvis_body{
+    // display:none
+  }
+  
 }

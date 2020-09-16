@@ -5,6 +5,7 @@ import Register from '../auth/Register'
 import Login from '../auth/Login'
 import { isAuthenticated, logout } from '../../lib/auth'
 import Clock from '../common/Clock'
+import map1 from '../../assets/images/map4.png'
 
 
 class LoggedInHome extends React.Component{
