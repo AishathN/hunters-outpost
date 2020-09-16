@@ -1,12 +1,17 @@
 import React from 'react'
 // import axios from 'axios'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import MissionForm from '../missions/MissionForm'
 // import Missionnew from '../missions/Missionnew'
 // import MissionCard from '../missions/MissionCard'
 // import MissionHome from './MissionHome'
 
+
 class Jarvis extends React.Component {
+
+state = {
+  message:'Hello'
+}
 
 
   render() {
@@ -17,15 +22,16 @@ class Jarvis extends React.Component {
           <div className="spinning-loader">
             <div className="spinning-loader2">
               <div className="spinning-loader4">
-              <div className="jarvis_core">
-                <div className="jarvis_glow">
-                  </div>
+                <div className="jarvis_core">
+                <Link to="/missions"><div className="jarvis_glow">
+                  </div></Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* <div><h2></h2></div> */}
     </div>
     )
   }

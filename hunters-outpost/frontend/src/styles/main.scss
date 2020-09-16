@@ -10,9 +10,6 @@ body {
   color: cadetblue;
 }
 
-.search{
-
-}
 .mission_style{
   min-height: 600px;
   max-height:700px;
@@ -21,8 +18,6 @@ body {
   max-width:100%;
   min-width:100%;
   min-height:100%;
-  // max-height:100%;
-  // padding:75px 75px;
 }
 
 .loghome{
@@ -30,13 +25,10 @@ body {
   width:100%;
   background-image: url('../assets/images/map4.png');
   background-repeat: no-repeat;
-  // background-color: black;
   background-size: cover;
   background-position: center;
   filter:saturate(190%);
-  // filter: hue-rotate(20deg);
   position:relative;
-  // filter: sepia(10%);
 }
 
 .profileImage{
@@ -61,7 +53,6 @@ body {
   align-items: center;
   background-color: rgba(7, 26, 24, 0.781);
   border: 1px solid rgba(32, 178, 171, 0.726);
-  // padding: 10px;
   color: cadetblue;
   border-radius:5px;
 }
@@ -133,7 +124,6 @@ button {
 }
 
 .about{
-  
   background-color: rgba(7, 26, 24, 0.781);
   border: 1px solid rgba(32, 178, 171, 0.726);
   padding: 10px;
@@ -201,7 +191,6 @@ margin: 0 25px 0 25px;
   max-height:400px;
 }
 
-
 .mission_detail{
   height: 500px;
   max-width:600px;
@@ -215,9 +204,7 @@ margin: 0 25px 0 25px;
   border-radius:5px;
 }
 
-
 // authentication styles
-
 
 .newMission_style{
   background-color:rgba(14, 49, 43, 0.61);
@@ -249,7 +236,6 @@ margin: 0 25px 0 25px;
   max-width:80%;
   max-height: 250px;
 }
-
 
 // app js styles
 
@@ -291,7 +277,6 @@ a:hover {
   transition: all 0.1s ease-in;
 }
 
-
 .missionItem{
   background-color: rgba(7, 26, 24, 0.781);
   color:rgba(42, 161, 155, 0.932);
@@ -307,9 +292,6 @@ a:hover {
   color:rgba(230, 238, 238, 0.932);
   filter: brightness(200%);
 }
-
-
-
 
 .missionForm{
   width:50%;
@@ -350,7 +332,6 @@ a:visited{
   color:rgb(82, 237, 227)
 }
 
-
 // JARVIS 
 
 .jarvis_body {
@@ -358,10 +339,15 @@ a:visited{
   min-height: 500px;
   width: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 400px;
   max-width:40%
+}
+
+.jarvis_body h2{
+  margin:30px;
 }
 
 .jarvis_notched {
@@ -399,7 +385,6 @@ a:visited{
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-direction: reverse;
-  
   position: relative;
 }
 .spinning-loader {
@@ -493,7 +478,6 @@ a:visited{
   position: relative;  
   animation-name: colour_ease2 3s infinite ease-in-out;
   box-shadow: 0px 0px 55px 55px rgba(227, 252, 252, 0.589);
-  
 }
 
 .jarvis_glow{
@@ -514,8 +498,6 @@ a:visited{
   50% { background: rgba(2,254,255,0.3); }
   100% { background: rgba(2,254,255,1); }
 }
-
-
 
 @keyframes rotate-s-loader {
   from {
@@ -593,17 +575,12 @@ a:visited{
   position: relative;
 }
 
-
 .spinning-loader2b {
   display:flex;
   align-items: center;
   justify-content: center;
   width: 95px;
   height: 70px;
-  // border: 2px solid rgba(29, 161, 242, 0.2);
-  // border-left-color: rgba(29, 160, 242, 0.514);
-  // border-right-color: rgb(29, 161, 242);
-  // border-top-color: rgb(29, 161, 242, );
   border-radius: 50%;
   background: transparent;
   animation-name: rotate-s-loader;
@@ -622,7 +599,6 @@ a:visited{
   height: 90px;
   border: 2px solid rgba(29, 161, 242, 0.2);
   border-left-color: rgba(29, 160, 242, 0.514);
-  // border-right-color: rgb(29, 161, 242);
   border-top-color: rgb(29, 192, 242);
   border-radius: 50%;
   background: transparent;
@@ -647,27 +623,7 @@ a:visited{
   animation-duration: 2s;
   animation-timing-function: linear;
   position: relative;  
-  
 }
-
-// .jarvis_coreb :hover{
-//   display:flex;
-//   align-items: center;
-//   justify-content: center;
-//   background: #ffffff;
-//   transition: 0.3s;
-//   width: 150px;
-//   height: 150px;
-//   border-radius: 50%;
-//   animation-name: rotate-s-loader;
-//   animation-iteration-count: infinite;
-//   animation-duration: 2s;
-//   animation-timing-function: linear;
-//   position: relative;  
-//   animation-name: colour_ease2 3s infinite ease-in-out;
-//   box-shadow: 0px 0px 55px 55px rgba(227, 252, 252, 0.589);
-  
-// }
 
 .jarvis_glowb{
   display:flex;
@@ -688,8 +644,6 @@ a:visited{
   100% { background: rgba(2,254,255,1); }
 }
 
-
-
 @keyframes rotate-s-loaderb {
   from {
     transform: rotate(0);
@@ -703,8 +657,6 @@ a:visited{
   .leaderboard {
     display: none;
   }
-
-  .navbar_style {}
 
   .search{
     display:none
@@ -722,8 +674,4 @@ a:visited{
     display:none
   }
 
-  .jarvis_body{
-    // display:none
-  }
-  
 }
