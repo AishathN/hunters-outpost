@@ -15,3 +15,4 @@ Aesthetics: Hunters And Gatherers was always meant to resemble a game interface 
 be associated with the collection of niche items. To that end CSS was used extensively to animated and add glow and hover effects to elements, and scrollbars were 
 implemented to keep the page from expanding too far outside of the 'console'. 
 
+<img src="https://i.imgur.com/huR2Xpn.jpg">
