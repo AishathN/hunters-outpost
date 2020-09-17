@@ -21,7 +21,7 @@ class Userpage extends React.Component {
         const userId = this.props.match.params.id
         this.setState ({userInfo: parseInt(userId)})
         const res = await getSingleUser(userId)
-        this.setState({ userInfo: res.data })
+        this.setState({ userInfo: res.data, search: res.data.created_mission })
     } catch (err) {
       console.log(err)
     }
@@ -52,9 +52,10 @@ componentDidUpdate = async (prevProps) => {
             <div className="profileImageDiv">
             <img src = {this.state.userInfo.profile_image} className="profileImage"></img>
             </div>
+            <p>CREATED MISSIONS</p>
             {this.state.search.map(name => {
             return (
-              <div><Link to={`/missions/${name.id}/`}>{name.name} </Link>
+              <div><Link to={`/missions/${name.id}/`} className="texthover">{name.name} </Link>
               </div>
             )
           })}

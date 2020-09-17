@@ -1,6 +1,8 @@
 
-// mission styles for left side
 @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+
+// General styling elements 
 
 body {
   background-color: black;
@@ -10,121 +12,36 @@ body {
   color: cadetblue;
 }
 
-.mission_style{
-  min-height: 600px;
-  max-height:700px;
-}
-.maxLeftWidth{
-  max-width:100%;
-  min-width:100%;
-  min-height:100%;
+.wrapper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  min-height:550px;
 }
 
-.mission_indivspacer{
-  width:600px
-}
-
-.loghome{
-  height:80%;
-  width:100%;
-  background-image: url('../assets/images/map4.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter:saturate(190%);
-  position:relative;
-}
-
-.profileImage{
-  max-height:300px;
-  filter: saturate(20%);
+.right_style{
   display:flex;
   justify-content: center;
-  align-items: center;
-  padding:20px;
-  max-width:340px
-}
-
-.profile_detail{
-  min-width:500px;
-  max-width:500px;
-  background-color: rgba(7, 26, 24, 0.781);
-}
-
-.profileImageDiv{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(7, 26, 24, 0.781);
-  border: 1px solid rgba(32, 178, 171, 0.726);
+  width:40%;
   color: cadetblue;
-  border-radius:5px;
 }
 
-.profileImage:hover{
-  filter:saturate(80%)
+
+a:link {
+  text-decoration: none;
+  color:white
 }
 
-.leaderboard {
-  max-height:200px;
-  padding:50px
+a:visited{
+  text-decoration: none;
+  color:rgb(82, 237, 227)
 }
 
-.clock {
-  padding:0 100px;
-  min-height: 100vh;
-  }
-
-.Time {
-  width: 200px;
-  margin: 15px;
-  top: 0; left: 0; bottom: 0; right: 0;
-  color: rgba(96, 222, 222, 0.76);
-  font-size: 30px;
-  padding:0 100px;
-  filter: brightness(200%);
-  text-shadow: 0 0 15px #fefefeb0;
-  }
-
-.leaderboard h4:hover{
-  filter: brightness(200%);
-  filter: sepia();
-}
-
-.leaderboard h1:hover{
-  filter: brightness(200%);
-  filter: sepia();
-}
-
-.missionTitle h3{
-  filter: brightness(200%);
-  }
-
-.leaderboard h1{
-  color:  rgba(167, 254, 255, 0.564);
-  text-shadow: 0 0 15px #fefefec0;
-}
-.leaderboard h4{
-  color:rgba(198, 254, 255, 0.564);
-  text-shadow: 0 0 15px #fefefeb0;
-}
-
-.flicker{
-	animation:flicker 0.8s infinite;
-}
-
-button {
-  max-width:100px;
-  background-color: rgba(122, 242, 204, 0.865);
-}
-
-.button2{
-  max-width:100px;
-  background-color: rgba(122, 242, 204, 0.865);
-}
-
-.commentform{
-  max-width:200px
+a:hover {
+  color: #7bd3dd;
+  text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
+  transition: all 0.1s ease-in;
 }
 
 .about{
@@ -139,12 +56,13 @@ button {
   max-height:160px
 }
 
-.wrapper{
-display:flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: stretch;
-min-height:550px;
+// mission / left side page styling ----------------------
+
+
+.maxLeftWidth{
+  max-width:100%;
+  min-width:100%;
+  min-height:100%;
 }
 
 .left_style{
@@ -153,62 +71,6 @@ min-height:550px;
   width:40%;
 }
 
-.right_style{
-  display:flex;
-  justify-content: center;
-  width:40%;
-  color: cadetblue;
-}
-
-.login_style{
-min-width: 35%;
-background-color: rgba(7, 26, 24, 0.781);
-border: 1px solid rgba(32, 178, 171, 0.726);
-padding: 10px;
-color: cadetblue;
-margin: 0 25px 0 25px;
-}
-
-.register_style{
-  min-width: 35%;
-  background-color: rgba(7, 26, 24, 0.781);
-  border: 1px solid rgba(32, 178, 171, 0.726);
-  padding: 10px;
-  color: cadetblue;
-  margin: 0 25px 0 25px;
-}
-
-.auth_style{
-  display:flex;
-}
-
-.missionBase {
-  display:flex;
-  justify-content: center;
-}
-
-.splitstyle{
-  display:flex;
-}
-
-.mission_spacer{
-  max-height:400px;
-}
-
-.mission_detail{
-  height: 500px;
-  max-width:600px;
-  min-width: 400px;
-  display:flex;
-  flex-direction: column;
-  color: cadetblue;
-  padding:0px 5px;
-  background-color: rgba(7, 26, 24, 0.781);
-  color:rgba(42, 161, 155, 0.932);
-  border-radius:5px;
-}
-
-// authentication styles
 
 .newMission_style{
   background-color:rgba(14, 49, 43, 0.61);
@@ -241,6 +103,220 @@ margin: 0 25px 0 25px;
   max-height: 250px;
 }
 
+.missionTitle h3{
+  filter: brightness(200%);
+  }
+
+.mission_style{
+  min-height: 600px;
+  max-height:700px;
+}
+
+.missionBase {
+  display:flex;
+  justify-content: center;
+}
+
+.splitstyle{
+  display:flex;
+}
+
+.mission_spacer{
+  max-height:400px;
+}
+
+.mission_indivspacer{
+  width:600px
+}
+
+.mission_detail{
+  height: 500px;
+  max-width:600px;
+  min-width: 400px;
+  display:flex;
+  flex-direction: column;
+  color: cadetblue;
+  padding:0px 5px;
+  background-color: rgba(7, 26, 24, 0.781);
+  color:rgba(42, 161, 155, 0.932);
+  border-radius:5px;
+}
+
+
+.missionItem{
+  background-color: rgba(7, 26, 24, 0.781);
+  color:rgba(42, 161, 155, 0.932);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  margin:10px;
+  padding:10px;
+  border-radius:5px
+}
+
+.missionItem h3:hover{
+    color:  rgba(167, 254, 255, 0.564);
+    text-shadow: 0 0 15px #fefefec0;
+  color:rgba(230, 238, 238, 0.932);
+  filter: brightness(200%);
+}
+
+
+// Login and form styles
+
+.loghome{
+  height:80%;
+  width:100%;
+  background-image: url('../assets/images/map4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter:saturate(190%);
+  position:relative;
+}
+
+.commentform{
+  max-width:200px
+}
+
+button {
+  max-width:100px;
+  background-color: rgba(122, 242, 204, 0.865);
+}
+
+.button2{
+  max-width:100px;
+  background-color: rgba(122, 242, 204, 0.865);
+}
+
+
+.login_style{
+  min-width: 35%;
+  background-color: rgba(7, 26, 24, 0.781);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  padding: 10px;
+  color: cadetblue;
+  margin: 0 25px 0 25px;
+}
+
+.register_style{
+  min-width: 35%;
+  background-color: rgba(7, 26, 24, 0.781);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  padding: 10px;
+  color: cadetblue;
+  margin: 0 25px 0 25px;
+}
+
+.auth_style{
+  display:flex;
+}
+
+.missionForm{
+  width:50%;
+  max-width:400px;
+  padding:20px;
+  margin:40px 0px;
+  border-radius:5px
+}
+
+.textyfield{
+  min-width:350px;
+  min-height:100px;
+  font-size:18px
+}
+
+.input{
+  font-size:16px
+}
+
+.textareabg{
+  background-color: rgba(14, 49, 43, 0.61);
+  color:rgba(32, 178, 171, 0.726);
+}
+
+// profile styling ---------------
+
+.profileImage{
+  max-height:300px;
+  filter: saturate(20%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  max-width:340px
+}
+
+.profile_detail{
+  min-width:500px;
+  max-width:500px;
+  max-height:300px;
+}
+
+.profileImageDiv{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(7, 26, 24, 0.781);
+  border: 1px solid rgba(32, 178, 171, 0.726);
+  color: cadetblue;
+  border-radius:5px;
+  max-width:450px
+}
+
+.profileImage:hover{
+  filter:saturate(80%)
+}
+
+// clock styling -------------------
+
+.clock {
+  padding:0 100px;
+  min-height: 100vh;
+  }
+
+.Time {
+  width: 200px;
+  margin: 15px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: rgba(96, 222, 222, 0.76);
+  font-size: 30px;
+  padding:0 100px;
+  filter: brightness(200%);
+  text-shadow: 0 0 15px #fefefeb0;
+  }
+
+// right side / leaderboard styling
+
+.leaderboard {
+  max-height:200px;
+  padding:50px
+}
+
+.leaderboard h4:hover{
+  filter: brightness(200%);
+  filter: sepia();
+}
+
+.leaderboard h1:hover{
+  filter: brightness(200%);
+  filter: sepia();
+}
+
+
+.leaderboard h1{
+  color:  rgba(167, 254, 255, 0.564);
+  text-shadow: 0 0 15px #fefefec0;
+}
+.leaderboard h4{
+  color:rgba(198, 254, 255, 0.564);
+  text-shadow: 0 0 15px #fefefeb0;
+}
+
+.texthover:hover{
+  filter: brightness(200%);
+  filter: sepia();
+}
+
+
 // app js styles
 
 .app_style{
@@ -267,42 +343,6 @@ margin: 0 25px 0 25px;
   width:100%;
   display:flex;
   justify-content: center;
-  // align-items: center;
-}
-
-.textareabg{
-  background-color: rgba(14, 49, 43, 0.61);
-  color:rgba(32, 178, 171, 0.726);
-}
-
-a:hover {
-  color: #7bd3dd;
-  text-shadow:0px 0px 55px 55px rgba(105, 241, 241, 1);
-  transition: all 0.1s ease-in;
-}
-
-.missionItem{
-  background-color: rgba(7, 26, 24, 0.781);
-  color:rgba(42, 161, 155, 0.932);
-  border: 1px solid rgba(32, 178, 171, 0.726);
-  margin:10px;
-  padding:10px;
-  border-radius:5px
-}
-
-.missionItem h3:hover{
-    color:  rgba(167, 254, 255, 0.564);
-    text-shadow: 0 0 15px #fefefec0;
-  color:rgba(230, 238, 238, 0.932);
-  filter: brightness(200%);
-}
-
-.missionForm{
-  width:50%;
-  max-width:400px;
-  padding:20px;
-  margin:40px 0px;
-  border-radius:5px
 }
 
 .navimage{
@@ -311,28 +351,8 @@ a:hover {
   margin:10px;
 }
 
-.textyfield{
-  min-width:350px;
-  min-height:100px;
-  font-size:18px
-}
-
-.input{
-  font-size:16px
-}
-
 .navimage:hover{
   filter: brightness(500%);
-}
-
-a:link {
-  text-decoration: none;
-  color:white
-}
-
-a:visited{
-  text-decoration: none;
-  color:rgb(82, 237, 227)
 }
 
 // JARVIS 
@@ -407,7 +427,6 @@ a:visited{
   animation-timing-function: linear;
   position: relative;
 }
-
 
 .spinning-loader2 {
   display:flex;

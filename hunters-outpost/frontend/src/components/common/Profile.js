@@ -5,6 +5,7 @@ import { isAuthenticated , getUserId} from '../../lib/auth'
 import { getSingleUser } from '../../lib/api'
 import Jarvis from '../common/jarvis'
 import Leaderboard from '../missions/Leaderboard'
+import { Link } from 'react-router-dom'
 
 class Profile extends React.Component {
   state = {
@@ -12,7 +13,8 @@ class Profile extends React.Component {
     owner:false,
     profileId: null,
     userNumber:null,
-    formData:[]
+    formData:[],
+    search:[]
   }
 
  
@@ -21,7 +23,7 @@ console.log("in component did mount")
     try {
       const res = await (getSingleUser(getUserId()))
       console.log(res.data)
-      this.setState({userInfo: res.data})
+      this.setState({userInfo: res.data, search: res.data.created_mission})
     } catch (err) {
       console.log(err)
     }
@@ -29,7 +31,7 @@ console.log("in component did mount")
 
 
   render(){
-    console.log(this.state.userInfo)
+    // console.log(this.state.userInfo)
     return (
       <div className="wrapper">
       <div className="left_style">
@@ -40,7 +42,14 @@ console.log("in component did mount")
             <div className="profileImageDiv">
             <img src = {this.state.userInfo.profile_image} className="profileImage"></img>
             </div>
-          <div>   
+          <div>
+            <p>CREATED MISSIONS</p>
+            {this.state.search.map(name => {
+            return (
+              <div><Link to={`/missions/${name.id}/`}>{name.name} </Link>
+              </div>
+            )
+          })}
         </div>
         </div>
       </PerfectScrollbar>
