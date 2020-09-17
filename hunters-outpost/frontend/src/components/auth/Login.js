@@ -2,7 +2,6 @@ import React from 'react'
 import { loginUser } from '../../lib/api'
 import { setToken } from "../../lib/auth"
 import { Link } from 'react-router-dom'
-// import { popupNotification } from '../../lib/notification'
 
 class Login extends React.Component {
   state = {
@@ -18,7 +17,6 @@ class Login extends React.Component {
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     this.setState({ formData, error: false })
-    // console.log(this.state)
   }
 
   handleSubmit = async event => {
@@ -26,9 +24,7 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)
-      // this.setState({ username: res.data.username})
       this.setState({divmessage: res.data.message})
-      // this.state.history.push('/missions')
       this.props.history.push('/missions')
     } catch (err) {
       this.setState({ error: true })
@@ -58,7 +54,6 @@ class Login extends React.Component {
                   <label className="label">Email</label>
                   <div className="control">
                     <input
-                      // placeholder="Email"
                       name="email"
                       className="textareabg"
                       onChange={this.handleChange}
@@ -71,7 +66,6 @@ class Login extends React.Component {
                   <div className="control">
                     <input
                       type="password"
-                      // placeholder="Password"
                       name="password"
                       className="textareabg"
                       onChange={this.handleChange}
@@ -79,7 +73,6 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
-               
 
                 <div className="field">
                   <button 
@@ -87,7 +80,7 @@ class Login extends React.Component {
                     type="submit">
                     Login
                   </button>
-                 
+
                 </div>
                 
               </form>

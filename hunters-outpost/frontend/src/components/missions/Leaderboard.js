@@ -16,7 +16,6 @@ class Leaderboard extends React.Component{
     try {
       const res = await getAllUsers()
       this.setState({ users: res.data })
-      // console.log(this.state.users)
       this.setState({users:this.state.users.sort(function(a, b) {
         return b.points - a.points;
     })})

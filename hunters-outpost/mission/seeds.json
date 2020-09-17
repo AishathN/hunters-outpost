@@ -42,21 +42,6 @@
 },
 {
   "model": "mission.mission",
-  "pk": 30,
-  "fields": {
-    "name": "Pennywise the clown doll",
-    "description": "Looking for a Pennywise doll, preferably the Hot Toys version",
-    "image": "https://i.ebayimg.com/images/g/jHUAAOSwYl9dehG5/s-l1600.jpg",
-    "owner": 15,
-    "category": [
-      8,
-      16,
-      4
-    ]
-  }
-},
-{
-  "model": "mission.mission",
   "pk": 31,
   "fields": {
     "name": "Bulma animation cel",
@@ -112,19 +97,6 @@
 },
 {
   "model": "mission.mission",
-  "pk": 37,
-  "fields": {
-    "name": "Shortfin Mako",
-    "description": "WTB male or female! Please leave details in the comments",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Isurus_oxyrinchus_by_mark_conlin2.JPG/440px-Isurus_oxyrinchus_by_mark_conlin2.JPG",
-    "owner": 16,
-    "category": [
-      14
-    ]
-  }
-},
-{
-  "model": "mission.mission",
   "pk": 38,
   "fields": {
     "name": "dessert wine STICKY",
@@ -133,6 +105,34 @@
     "owner": 14,
     "category": [
       2
+    ]
+  }
+},
+{
+  "model": "mission.mission",
+  "pk": 39,
+  "fields": {
+    "name": "Pennywise the clown doll",
+    "description": "Looking for a Pennywise doll, preferably the Hot Toys version",
+    "image": "https://i.ebayimg.com/images/g/jHUAAOSwYl9dehG5/s-l1600.jpg",
+    "owner": 14,
+    "category": [
+      8,
+      16
+    ]
+  }
+},
+{
+  "model": "mission.mission",
+  "pk": 40,
+  "fields": {
+    "name": "Gatchaman animation cel",
+    "description": "animation cel from the 1970s",
+    "image": "https://lh3.googleusercontent.com/proxy/GujFjsM_PBFgp31XYzxroLYd4EUs6MhBa4jyN73A0dTd43B9g2nQDIkuYsvH1pr2e3_E8Av2BA6qbc-1pE6JtH3YT801oT9-Q4YR5MBS1fsA-tdP",
+    "owner": 17,
+    "category": [
+      8,
+      4
     ]
   }
 }

@@ -1,6 +1,4 @@
 import React from 'react'
-// import axios from 'axios'
-// import { Link } from 'react-router-dom'
 import Register from '../auth/Register'
 import Login from '../auth/Login'
 import { isAuthenticated, logout } from '../../lib/auth'
@@ -9,7 +7,6 @@ import map1 from '../../assets/images/map4.png'
 
 
 class LoggedInHome extends React.Component{
-  // state to store form data
   state = {
     
   }

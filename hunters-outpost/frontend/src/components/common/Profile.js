@@ -40,9 +40,8 @@ console.log("in component did mount")
             <div className="profileImageDiv">
             <img src = {this.state.userInfo.profile_image} className="profileImage"></img>
             </div>
-            <div>   
-             
-  </div>
+          <div>   
+        </div>
         </div>
       </PerfectScrollbar>
       

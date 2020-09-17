@@ -1,10 +1,5 @@
 import React from 'react'
-// import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import MissionForm from '../missions/MissionForm'
-// import Missionnew from '../missions/Missionnew'
-// import MissionCard from '../missions/MissionCard'
-// import MissionHome from './MissionHome'
 
 
 class Jarvis extends React.Component {
@@ -12,7 +7,6 @@ class Jarvis extends React.Component {
 state = {
   message:'Hello'
 }
-
 
   render() {
     return (
@@ -31,7 +25,6 @@ state = {
           </div>
         </div>
       </div>
-      {/* <div><h2></h2></div> */}
     </div>
     )
   }

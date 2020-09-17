@@ -29,7 +29,6 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
     <form onSubmit={handleSubmit}>
 
       <div className="field">
-        {/* <label className="label">Mission Title</label> */}
           <div className="control">
             <input
               type="text"
@@ -53,7 +52,6 @@ const MissionForm = ({ handleSubmit, handleChange, handleMultiChange, formData, 
               />
             </div>
           </div>
-          {/* <label className="label">CATEGORIES</label> */}
           <div className="field">
                 <div className="control">
                   <Select options={options}

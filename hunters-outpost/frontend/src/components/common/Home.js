@@ -1,14 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import Left from '../common/LeftSide'
-// import Right from '../common/RightSide'
-// import { Link } from 'react-router-dom'
 import Jarvis from '../common/jarvis'
 import Leaderboard from '../missions/Leaderboard'
 
 
 class Home extends React.Component{
-  // state to store form data
   state = {
     missions: []
   }
@@ -19,7 +16,6 @@ class Home extends React.Component{
     try {
       const res = await axios.get('/api/missions')
       this.setState({ missions: res.data })
-      // console.log(this.state)
     } catch (err) {
       console.log(err)
     }

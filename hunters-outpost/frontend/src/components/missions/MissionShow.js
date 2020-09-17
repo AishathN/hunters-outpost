@@ -32,25 +32,12 @@ class MissionShow extends React.Component {
       const missionId = this.props.match.params.id
       this.setState ({mission: parseInt(missionId)})
       const res = await getSingleMission(missionId)
-      this.setState({ thismission: res.data })
-      this.setState({ comments: res.data.comments })
-      this.setState({ missionposter: res.data.owner.username})
-      this.setState({ category: res.data.category })
-      this.setState({ missionposterid: res.data.owner.id})
+      this.setState({ thismission: res.data , comments: res.data.comments , missionposter: res.data.owner.username, category: res.data.category, missionposterid: res.data.owner.id })
       
     } catch (err) {
       console.log(err)
     }
-    // const currentUser = getUserId()
-    // console.log(currentUser)
-    // console.log(this.state.missionposterid)
-    // if (getUserId() == this.state.missionposterId){
-    //   this.setState({owner:true})
-    //   console.log(this.state.owner)
-    // }
-    
   }
-
 
   handleChange = mission => {
     const formData = { ...this.state.formData, [mission.target.name]: mission.target.value , mission: this.state.mission}
@@ -92,17 +79,14 @@ class MissionShow extends React.Component {
     }
   }
 
-  //on button click 
-  //get userdata for commenter (eachcomment.owner.id)
-  //modify userdata (points plus one)
-  //send userdata in put request to db
-
 
     render() {
       return (
         <div className="wrapper">
         <div className="left_style">
+          
         <PerfectScrollbar>
+        <div className="mission_indivspacer">
           <div className="mission_detail">
             <h1>{this.state.thismission.name}</h1>
             <h4>{this.state.thismission.description}</h4>
@@ -133,9 +117,10 @@ class MissionShow extends React.Component {
                 </div>
               </form>  }
                   </div>
-              
+                  </div>
               </div>
         </PerfectScrollbar>
+       
         
     </div>
     <div className="right_style">

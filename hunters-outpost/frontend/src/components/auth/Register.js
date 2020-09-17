@@ -30,7 +30,6 @@ class Register extends React.Component {
     try {
       await registerUser(this.state.formData)
       this.setState({divMessage: '   SUCCESS   '})
-      // this.props.history.push('/login')
     } catch (err) {
       console.log('error occured', err)
     }
@@ -55,7 +54,6 @@ class Register extends React.Component {
                   <input
                     type="text"
                     name="username"
-                    // placeholder="Username"
                     className="textareabg"
                     onChange={this.handleChange}
                     value={this.state.formData.username}
@@ -70,7 +68,6 @@ class Register extends React.Component {
                     type="text"
                     name="email"
                     className="textareabg"
-                    // placeholder="Email"
                     value={this.state.formData.email}
                     onChange={this.handleChange}
                   />
@@ -82,7 +79,6 @@ class Register extends React.Component {
                 <div className="control">
                   <input
                     type="password"
-                    // placeholder="password"
                     className="textareabg"
                     name="password"
                     value={this.state.formData.password}
@@ -97,7 +93,6 @@ class Register extends React.Component {
                   <input
                     type="password"
                     className="textareabg"
-                    // placeholder="Password Confirmation"
                     name="password_confirmation"
                     value={this.state.formData.password_confirmation}
                     onChange={this.handleChange}
@@ -112,7 +107,6 @@ class Register extends React.Component {
                     className="input"
                     type="text"
                     name="profile_image"
-                    // placeholder="www.cnn.com"
                     className="textareabg"
                     value={this.state.formData.profilePicture}
                     onChange={this.handleChange}

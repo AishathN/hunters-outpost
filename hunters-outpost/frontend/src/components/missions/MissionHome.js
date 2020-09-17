@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-// import { Link } from 'react-router-dom'
 import MissionCard from '../missions/MissionCard'
 import Jarvis from '../common/jarvis'
 import PerfectScrollbar from 'react-perfect-scrollbar'
@@ -19,7 +18,6 @@ class MissionHome extends React.Component {
     try {
       const res = await axios.get('/api/missions')
       this.setState({ missions: res.data })
-      // console.log(this.state)
     } catch (err) {
       console.log(err)
     }
@@ -28,7 +26,6 @@ class MissionHome extends React.Component {
   }
 
   render() {
-    // console.log(this.state)
     return (
       <div className="wrapper">
         <div className="left_style">

@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { isAuthenticated , getUserId} from '../../lib/auth'
 import { getSingleUser } from '../../lib/api'
 import Jarvis from '../common/jarvis'
 import Leaderboard from '../missions/Leaderboard'
@@ -11,10 +10,10 @@ class Userpage extends React.Component {
     userInfo: [],
     owner:false,
     profileId: null,
-    userNumber:null
+    userNumber:null,
+    search: []
   }
 
- 
   async componentDidMount() {
 
     try {
@@ -29,46 +28,19 @@ class Userpage extends React.Component {
 
 componentDidUpdate = async (prevProps) => {
   if (prevProps.location.pathname.includes('/users/') && this.props.location.pathname.includes('/users/')) {
-    // console.log("I am here")
+    console.log("I am here")
     if (this.props.location.pathname !== prevProps.location.pathname) {
       const id = this.props.match.params.id
       const res = await getSingleUser(id)
-      // console.log(res.data)
-      this.setState({ userInfo: res.data })
+      console.log(res.data)
+      this.setState({ userInfo: res.data, search: res.data.created_mission })
     }
   }
 }
 
-// async componentWillReceiveProps(nextProps){
-  
-//   try {
-//     console.log('new user info needed')
-//     const userId = this.props.match.params.id
-//     console.log(userId)
-//     const res = await getSingleUser(userId)
-//     this.setState ({userInfo: parseInt(userId)})
-//     this.setState({ userInfo: res.data })
-//     console.log(this.state.userInfo)
-// } catch (err) {
-//   console.log(err)
-// }
-// }
-
-// async componentDidUpdate(prevProps) {
-//   try {
-//  if (this.props.location.pathname !== prevProps.location.pathname) {
-//     const userId = this.props.match.params.id
-//     const res = getSingleUser(userId)
-//     // this.setState ({userInfo: parseInt(userId)})
-//     this.setState({ userInfo: res.data })
-//   } }catch (err) {
-//     console.log(err)
-//     }
-//   }
-// }
-
-
   render(){
+
+    console.log(this.state.search)
     return (
       <div className="wrapper">
       <div className="left_style">
