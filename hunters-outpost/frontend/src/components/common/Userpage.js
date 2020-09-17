@@ -3,6 +3,7 @@ import axios from 'axios'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { getSingleUser } from '../../lib/api'
 import Jarvis from '../common/jarvis'
+import { Link } from 'react-router-dom'
 import Leaderboard from '../missions/Leaderboard'
 
 class Userpage extends React.Component {
@@ -51,6 +52,12 @@ componentDidUpdate = async (prevProps) => {
             <div className="profileImageDiv">
             <img src = {this.state.userInfo.profile_image} className="profileImage"></img>
             </div>
+            {this.state.search.map(name => {
+            return (
+              <div><Link to={`/missions/${name.id}/`}>{name.name} </Link>
+              </div>
+            )
+          })}
         </div>
       </PerfectScrollbar>
       

@@ -33,6 +33,7 @@ class MissionShow extends React.Component {
       this.setState ({mission: parseInt(missionId)})
       const res = await getSingleMission(missionId)
       this.setState({ thismission: res.data , comments: res.data.comments , missionposter: res.data.owner.username, category: res.data.category, missionposterid: res.data.owner.id })
+
       
     } catch (err) {
       console.log(err)
