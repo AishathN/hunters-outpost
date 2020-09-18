@@ -15,7 +15,7 @@ class About extends React.Component{
     return (
       <div className="about">
     <h2>WELCOME TO HUNTERS AND GATHERERS</h2>
-    <h4>For the discerning collector and seekers in search of a cause. Set a mission or assist others in their search.</h4>
+    <h4>For the discerning collector and seekers in search of a cause. Create a mission or assist others in their hunt.</h4>
     </div>
     )
   }
